@@ -7,8 +7,8 @@
     
     <!-- SEO Meta Tags -->
     <meta name="title" content="Projects & Architecture Case Studies | Sakhawat Hossain">
-    <meta name="description" content="Explore production backend projects, modular architectures, AWS deployments, and real-time systems engineered by Sakhawat Hossain (MyBergo, Auction Retriever, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences).">
-    <meta name="keywords" content="Laravel Projects, Backend Architecture, Scraping Engine, AWS Case Studies, MyBergo, Auction Retriever, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences, Next.js Fullstack, WebSockets, Sakhawat Hossain">
+    <meta name="description" content="Explore production backend projects, modular architectures, AWS deployments, and real-time systems engineered by Sakhawat Hossain (OmniCore, MyBergo, Auction Retriever, CodeStudio Pro, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences).">
+    <meta name="keywords" content="OmniCore, Laravel Projects, Modular Monolith, CodeStudio Pro, Next.js 16, Backend Architecture, Scraping Engine, AWS Case Studies, MyBergo, Auction Retriever, Fest-Quest, Caragon, EHListings, CruzeHub, OscarU, Organ Sciences, Next.js Fullstack, WebSockets, Sakhawat Hossain">
     <meta name="author" content="Sakhawat Hossain">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sajusun.github.io/projects.html">
@@ -105,6 +105,18 @@
               {
                 "@type": "SoftwareApplication",
                 "position": 1,
+                "name": "OmniCore - Modular Monolith & Concurrency-Safe E-Commerce Engine",
+                "operatingSystem": "Web, Cloud, Docker",
+                "applicationCategory": "BusinessApplication",
+                "url": "https://github.com/sajusun/OmniCore",
+                "author": {
+                  "@id": "https://sajusun.github.io/#person"
+                },
+                "description": "Enterprise modular monolith backend with Laravel 12 & PHP 8.4, DDD architecture, atomic stock-locking checkout (lockForUpdate), WebRTC, Reverb sockets, and Scribe OpenAPI 3.0 docs."
+              },
+              {
+                "@type": "SoftwareApplication",
+                "position": 2,
                 "name": "MyBergo - Hotel & Property Booking Engine",
                 "operatingSystem": "Web, Cloud",
                 "applicationCategory": "BusinessApplication",
@@ -116,7 +128,19 @@
               },
               {
                 "@type": "SoftwareApplication",
-                "position": 2,
+                "position": 3,
+                "name": "CodeStudio Pro - Agency Showcase & Real-Time Workspace",
+                "operatingSystem": "Web, Cloud",
+                "applicationCategory": "BusinessApplication",
+                "url": "https://code-studio-pro.vercel.app",
+                "author": {
+                  "@id": "https://sajusun.github.io/#person"
+                },
+                "description": "Full-stack agency platform with Next.js 16 App Router, React 19, Tailwind CSS v4, Laravel headless microservice, and real-time Reverb WebSocket alerts."
+              },
+              {
+                "@type": "SoftwareApplication",
+                "position": 4,
                 "name": "Auction Retriever - Property Scraping Engine",
                 "operatingSystem": "Web, Cloud",
                 "applicationCategory": "BusinessApplication",
@@ -128,7 +152,7 @@
               },
               {
                 "@type": "SoftwareApplication",
-                "position": 3,
+                "position": 5,
                 "name": "Organ Sciences - Supplement Subscription Platform",
                 "operatingSystem": "Web, Cloud",
                 "applicationCategory": "ECommerceApplication",
@@ -140,7 +164,7 @@
               },
               {
                 "@type": "SoftwareApplication",
-                "position": 4,
+                "position": 6,
                 "name": "EHListings - City Directory & Events Engine",
                 "operatingSystem": "Web, Cloud",
                 "applicationCategory": "BusinessApplication",
@@ -233,8 +257,9 @@
 
                 <!-- Filter Controls -->
                 <div class="flex flex-wrap items-center justify-center gap-2 pt-6">
-                    <button class="filter-btn active" data-filter="all">All Projects (9)</button>
+                    <button class="filter-btn active" data-filter="all">All Projects (10)</button>
                     <button class="filter-btn" data-filter="laravel">Laravel 11 / 12</button>
+                    <button class="filter-btn" data-filter="nextjs">Next.js / Frontend</button>
                     <button class="filter-btn" data-filter="aws">AWS Cloud</button>
                     <button class="filter-btn" data-filter="realtime">WebSocket / Reverb</button>
                     <button class="filter-btn" data-filter="multivendor">Multi-Tenant / Vendor</button>
@@ -393,6 +418,144 @@
 
                             <a href="https://mybergo.com" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5">
                                 <i class="fas fa-external-link-alt"></i> Visit Live Booking Engine
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Project: OmniCore -->
+                <div id="omnicore" class="project-card glass-panel p-4 sm:p-8 md:p-10 border border-white/10" data-category="laravel realtime multivendor aws">
+                    <div class="grid lg:grid-cols-12 gap-8 items-start">
+                        
+                        <div class="lg:col-span-8 space-y-6">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="tech-badge tech-badge-indigo">
+                                    <i class="fas fa-cubes text-indigo-400 text-[10px]"></i> Enterprise Open Source
+                                </span>
+                                <span class="text-xs font-mono text-gray-400">Modular Monolith &bull; PHP 8.4</span>
+                                <span class="text-xs font-mono text-indigo-400">Domain-Driven Design (DDD)</span>
+                            </div>
+
+                            <div>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">OmniCore — Modular Monolith Enterprise Backend &amp; Concurrency-Safe E-Commerce Engine</h2>
+                                <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
+                                    Architected and engineered a production-grade enterprise backend ecosystem built on <strong class="text-white">Laravel 12.x</strong> and <strong class="text-white">PHP 8.4+</strong> adhering to strict Clean Architecture, Domain-Driven Design (DDD), and SOLID design principles. Built with a decoupled Modular Monolith architecture (<code class="text-indigo-300 font-mono text-xs">app/Modules/</code>) capable of supporting enterprise-scale e-commerce, high-concurrency atomic checkout pipelines, Telegram-grade WebSocket chat, WebRTC audio/video calling, and multi-gateway payment integrations with zero PHPStan static analysis errors.
+                                </p>
+                            </div>
+
+                            <!-- Architecture & Problem Solving Breakdown -->
+                            <div class="space-y-4 pt-2">
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-indigo-400">Engineering Highlights &amp; Enterprise Architecture:</h3>
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-lock text-indigo-400"></i> Atomic Checkout &amp; Stock Locking
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Eliminated flash-sale overselling race conditions using DB transactions with row-level pessimistic locking (<code class="text-indigo-300 text-[11px]">lockForUpdate()</code>) and strict enum-backed state machine (<code class="text-indigo-300 text-[11px]">Pending &rarr; Confirmed &rarr; Processing &rarr; Shipped &rarr; Delivered</code>) with automatic inventory rollback on cancellation.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-sitemap text-cyan-400"></i> Decoupled Modular Monolith (DDD)
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Isolated business boundaries into independent modules (<code class="text-indigo-300 text-[11px]">app/Modules/Product, Cart, Order, Chat, Call, Payment, Affiliate, Interaction</code>), each encapsulating their own Controllers, Services, Repositories, Events, and Migrations.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-project-diagram text-emerald-400"></i> Cartesian Variant Matrix Generator
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Engineered dynamic attribute combination generator (e.g. <code class="text-indigo-300 text-[11px]">[Color] x [Size] x [Spec]</code>) calculating Cartesian products with deterministic SKU generation, automated barcode hashing, and isolated inventory tracking.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-credit-card text-amber-400"></i> Payment Gateway Strategy Pattern
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Architected extensible driver-based strategy layer implementing <code class="text-indigo-300 text-[11px]">PaymentGatewayInterface</code> with out-of-the-box drivers for Stripe (Intents &amp; Webhooks), PayPal v2 Orders, bKash (Tokenized API), SSLCommerz, User Wallet, and Bank Transfers.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-comments text-yellow-400"></i> Telegram-Grade Chat (Laravel Reverb)
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Integrated Laravel Reverb WebSocket broadcasting for instant bi-directional messaging, realtime typing indicators, message delivery receipts, read statuses, and user presence tracking under high concurrent traffic.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-video text-rose-400"></i> WebRTC Audio/Video Conferencing
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Implemented WebRTC peer-to-peer audio/video calling engine with dynamic socket signaling, screen sharing capabilities, session management, and automated call duration logs.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-heart text-purple-400"></i> Universal Polymorphic Interaction Engine
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Built a reusable headless module (<code class="text-indigo-300 text-[11px]">HasInteractions</code> trait) attaching multi-reaction likes, nested moderated comments, bookmark collections, cooldown view analytics, and expiring share links to any Eloquent model.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-check-double text-emerald-400"></i> PHPStan Level 5 &amp; Scribe OpenAPI 3.0
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            100% strict type-safe codebase verified with PHPStan Level 5 (0 errors), formatted with Laravel Pint (PSR-12), and complete automated Scribe interactive API documentation, Swagger UI, and Postman collections at <code class="text-indigo-300 text-[11px]">/docs</code>.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Tech Badges -->
+                            <div class="flex flex-wrap gap-2 pt-2">
+                                <span class="tech-badge">Laravel 12.x</span>
+                                <span class="tech-badge">PHP 8.4</span>
+                                <span class="tech-badge">Modular Monolith</span>
+                                <span class="tech-badge">PHPStan (Level 5)</span>
+                                <span class="tech-badge">Laravel Reverb</span>
+                                <span class="tech-badge">WebRTC Calling</span>
+                                <span class="tech-badge">Scribe OpenAPI 3.0</span>
+                                <span class="tech-badge">Redis 7 &amp; MySQL 8.0</span>
+                                <span class="tech-badge">Stripe &amp; PayPal</span>
+                                <span class="tech-badge">bKash &amp; SSLCommerz</span>
+                                <span class="tech-badge">Docker &amp; Compose</span>
+                                <span class="tech-badge">GitHub Actions CI/CD</span>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar / Live Actions -->
+                        <div class="lg:col-span-4 glass-panel p-4 sm:p-6 border border-white/10 space-y-4 sm:space-y-6">
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Open Source Repository</span>
+                                <div class="mt-2 space-y-2">
+                                    <a href="https://github.com/sajusun/OmniCore" target="_blank" rel="noopener" class="text-base font-bold text-indigo-400 hover:text-indigo-300 flex items-center gap-2">
+                                        <i class="fab fa-github"></i> github.com/sajusun/OmniCore
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Architecture Standards</span>
+                                <ul class="text-xs text-gray-300 mt-2 space-y-2">
+                                    <li><strong class="text-white">Pattern:</strong> Domain-Driven Design &amp; Modular Monolith</li>
+                                    <li><strong class="text-white">Static Analysis:</strong> PHPStan Level 5 (0 Errors)</li>
+                                    <li><strong class="text-white">Code Style:</strong> Laravel Pint (PSR-12 Compliance)</li>
+                                    <li><strong class="text-white">Interactive Docs:</strong> Scribe &amp; OpenAPI 3.0 (/docs)</li>
+                                    <li><strong class="text-white">Environment:</strong> Docker Compose (PHP 8.4, Reverb, Redis)</li>
+                                </ul>
+                            </div>
+
+                            <a href="https://github.com/sajusun/OmniCore" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5">
+                                <i class="fab fa-github"></i> View GitHub Repository
                             </a>
                         </div>
 
@@ -1068,43 +1231,76 @@
                     </div>
                 </div>
 
-                <!-- Project 4: CodeStudio Enterprise -->
-                <div id="code-studio" class="project-card glass-panel p-4 sm:p-8 md:p-10 border border-white/10" data-category="laravel realtime">
+                <!-- Project 10: CodeStudio Pro -->
+                <div id="code-studio" class="project-card glass-panel p-4 sm:p-8 md:p-10 border border-white/10" data-category="nextjs laravel realtime">
                     <div class="grid lg:grid-cols-12 gap-8 items-start">
                         
                         <div class="lg:col-span-8 space-y-6">
                             <div class="flex flex-wrap items-center gap-3">
-                                <span class="tech-badge tech-badge-amber">
-                                    <i class="fas fa-circle text-amber-400 text-[8px]"></i> Open Source / Client Hub
+                                <span class="tech-badge tech-badge-cyan">
+                                    <i class="fas fa-circle text-cyan-400 text-[8px]"></i> Production Live
                                 </span>
-                                <span class="text-xs font-mono text-gray-400">Enterprise Workspace</span>
+                                <span class="text-xs font-mono text-gray-400">Next.js 16 &bull; Headless Microservice</span>
+                                <span class="text-xs font-mono text-cyan-400">Full-Stack Architecture</span>
                             </div>
 
                             <div>
-                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">CodeStudio — Client Tracking & Real-Time Workspace</h2>
+                                <h2 class="text-2xl sm:text-3xl font-bold text-white mb-2">CodeStudio Pro — Agency Showcase, Interactive Sandbox &amp; Real-Time Workspace</h2>
                                 <p class="text-gray-300 leading-relaxed text-sm sm:text-base">
-                                    Created an all-in-one software agency and freelance tracking hub with private client workspaces, automated project milestone tracking, live WebSocket notifications, and secure deliverables management.
+                                    Engineered a high-performance, full-stack software agency hub and real-time client workspace (<a href="https://code-studio-pro.vercel.app" target="_blank" rel="noopener noreferrer" class="text-cyan-400 underline hover:text-cyan-300 font-semibold">code-studio-pro.vercel.app</a>). Built with <strong class="text-white">Next.js 16 (App Router)</strong>, <strong class="text-white">React 19</strong>, <strong class="text-white">TypeScript 5</strong>, and <strong class="text-white">Tailwind CSS v4</strong> on the frontend, interfaced with a decoupled <strong class="text-white">Laravel Microservice backend</strong> powering real-time WebSocket notifications via <strong class="text-white">Laravel Reverb</strong>, dynamic 5-palette theme switching, and automated project milestone tracking.
                                 </p>
                             </div>
 
                             <!-- Architecture & Problem Solving Breakdown -->
                             <div class="space-y-4 pt-2">
-                                <h3 class="text-sm font-mono uppercase tracking-wider text-amber-400">Engineering Highlights & Solutions:</h3>
+                                <h3 class="text-sm font-mono uppercase tracking-wider text-cyan-400">Engineering Highlights &amp; Full-Stack Solutions:</h3>
                                 <div class="grid sm:grid-cols-2 gap-4">
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-tasks text-amber-400"></i> Milestone Event Queues
+                                            <i class="fas fa-bolt text-cyan-400"></i> Next.js 16 App Router &amp; ISR Caching
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
-                                            Configured asynchronous queue workers to dispatch email updates, generate invoice PDFs, and notify clients in real-time when project milestones are signed off.
+                                            Leveraged Server Components and Incremental Static Regeneration (ISR <code class="text-cyan-300 text-[11px]">revalidate: 30s/60s</code>) for lightning-fast initial load times, seamless SEO indexability, and instant client-side route transitions.
                                         </p>
                                     </div>
                                     <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
                                         <div class="text-white font-semibold text-sm flex items-center gap-2">
-                                            <i class="fas fa-layer-group text-indigo-400"></i> Modular Service Layer
+                                            <i class="fas fa-palette text-purple-400"></i> Dynamic 5-Palette Theming Engine
                                         </div>
                                         <p class="text-xs text-gray-400 leading-relaxed">
-                                            Structured with clean separation between Controllers, Action classes, and Repositories to ensure testability and extensibility.
+                                            Engineered a Tailwind CSS v4 variable-driven theming architecture injecting custom CSS variables at runtime for 5 curated palettes (Oceanic Blue, Emerald Luxe, Violet Aura, Sunset Amber, Obsidian Slate) with persistent dark/light mode in <code class="text-cyan-300 text-[11px]">localStorage</code>.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-broadcast-tower text-yellow-400"></i> Real-Time Reverb WebSocket Alerts
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Integrated Laravel Echo &amp; Pusher JS client singletons listening to Laravel Reverb WebSocket channels for live project milestone toasts, notification bells, and real-time status feeds.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-calculator text-emerald-400"></i> Interactive Sandbox &amp; Cost Estimator
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Constructed dynamic product sandbox pages (<code class="text-cyan-300 text-[11px]">/products/[slug]</code>) with credential demo modals, interactive custom project quotation estimator (<code class="text-cyan-300 text-[11px]">/request-quote</code>), and team directory with role badges (<code class="text-cyan-300 text-[11px]">/team</code>).
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-network-wired text-indigo-400"></i> Headless Microservice REST API
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Designed a strongly-typed TypeScript API client (<code class="text-cyan-300 text-[11px]">src/lib/api.ts</code>) communicating with Laravel headless microservice endpoints with structured error boundaries, fallback mocks, and Redis query caching.
+                                        </p>
+                                    </div>
+                                    <div class="p-4 bg-white/[0.02] rounded-lg border border-white/5 space-y-1.5">
+                                        <div class="text-white font-semibold text-sm flex items-center gap-2">
+                                            <i class="fas fa-tasks text-amber-400"></i> Milestone Event Queues &amp; Invoicing
+                                        </div>
+                                        <p class="text-xs text-gray-400 leading-relaxed">
+                                            Configured asynchronous queue workers to dispatch email updates, generate invoice PDFs, and broadcast real-time socket events when milestones are signed off.
                                         </p>
                                     </div>
                                 </div>
@@ -1112,28 +1308,59 @@
 
                             <!-- Tech Badges -->
                             <div class="flex flex-wrap gap-2 pt-2">
-                                <span class="tech-badge tech-badge-amber">Laravel 11</span>
-                                <span class="tech-badge tech-badge-amber">WebSockets</span>
-                                <span class="tech-badge tech-badge-amber">Redis</span>
-                                <span class="tech-badge tech-badge-amber">MySQL</span>
-                                <span class="tech-badge tech-badge-amber">Tailwind CSS</span>
+                                <span class="tech-badge tech-badge-cyan">Next.js 16</span>
+                                <span class="tech-badge tech-badge-cyan">React 19</span>
+                                <span class="tech-badge tech-badge-cyan">TypeScript 5</span>
+                                <span class="tech-badge tech-badge-cyan">Tailwind CSS v4</span>
+                                <span class="tech-badge tech-badge-cyan">Laravel Reverb</span>
+                                <span class="tech-badge tech-badge-cyan">Laravel Microservice</span>
+                                <span class="tech-badge tech-badge-cyan">Laravel Echo</span>
+                                <span class="tech-badge tech-badge-cyan">Redis</span>
+                                <span class="tech-badge tech-badge-cyan">MySQL</span>
+                                <span class="tech-badge tech-badge-cyan">Lucide Icons</span>
+                                <span class="tech-badge tech-badge-cyan">Vercel Edge</span>
                             </div>
                         </div>
 
                         <!-- Sidebar / Live Actions -->
                         <div class="lg:col-span-4 glass-panel p-4 sm:p-6 border border-white/10 space-y-4 sm:space-y-6">
                             <div>
-                                <span class="text-xs font-mono uppercase text-gray-400">Repository</span>
+                                <span class="text-xs font-mono uppercase text-gray-400">Live Production App</span>
                                 <div class="mt-1">
-                                    <a href="https://github.com/sajusun/code-studio" target="_blank" rel="noopener" class="text-base font-bold text-amber-400 hover:text-amber-300 flex items-center gap-2">
+                                    <a href="https://code-studio-pro.vercel.app" target="_blank" rel="noopener" class="text-base font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-2">
+                                        <i class="fas fa-globe"></i> code-studio-pro.vercel.app
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Open Source Repository</span>
+                                <div class="mt-1">
+                                    <a href="https://github.com/sajusun/code-studio" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-300 hover:text-white flex items-center gap-2">
                                         <i class="fab fa-github"></i> github.com/sajusun/code-studio
                                     </a>
                                 </div>
                             </div>
 
-                            <a href="https://github.com/sajusun/code-studio" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5">
-                                <i class="fab fa-github"></i> View GitHub Repository
-                            </a>
+                            <div>
+                                <span class="text-xs font-mono uppercase text-gray-400">Full-Stack Stack</span>
+                                <ul class="text-xs text-gray-300 mt-2 space-y-2">
+                                    <li><strong class="text-white">Frontend:</strong> Next.js 16 (App Router) + React 19 + TS 5</li>
+                                    <li><strong class="text-white">Styling:</strong> Tailwind CSS v4 + 5 Custom Theme Palettes</li>
+                                    <li><strong class="text-white">Backend:</strong> Laravel Microservice REST API</li>
+                                    <li><strong class="text-white">Realtime:</strong> Laravel Reverb WebSockets &amp; Echo</li>
+                                    <li><strong class="text-white">Deployment:</strong> Vercel Edge Global CDN</li>
+                                </ul>
+                            </div>
+
+                            <div class="space-y-2.5">
+                                <a href="https://code-studio-pro.vercel.app" target="_blank" rel="noopener" class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2">
+                                    <i class="fas fa-external-link-alt"></i> Visit Live Platform
+                                </a>
+                                <a href="https://github.com/sajusun/code-studio" target="_blank" rel="noopener" class="w-full text-center text-sm py-2.5 px-4 rounded-lg border border-white/10 hover:bg-white/5 transition-colors flex items-center justify-center gap-2 text-gray-300 hover:text-white">
+                                    <i class="fab fa-github"></i> View GitHub Repository
+                                </a>
+                            </div>
                         </div>
 
                     </div>

@@ -606,6 +606,50 @@
                         </div>
                     </div>
 
+                    <!-- Project: OmniCore -->
+                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                        <div class="p-6 border-b border-white/10 flex-grow">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="tech-badge tech-badge-indigo">
+                                    <i class="fas fa-cubes text-indigo-400 text-[10px]"></i> Enterprise Open Source
+                                </span>
+                                <span class="text-xs font-mono text-gray-400">Modular Monolith &bull; PHP 8.4</span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">OmniCore — Modular Monolith & Concurrency-Safe E-Commerce Engine</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                Engineered a production-grade enterprise backend ecosystem built on Laravel 12 &amp; PHP 8.4 utilizing Domain-Driven Design (DDD). Features atomic checkout with row-level pessimistic locking (<code class="text-indigo-300 font-mono text-xs">lockForUpdate()</code>) preventing race conditions, Cartesian product variant generator, multi-gateway payment strategy (Stripe, PayPal, bKash, SSLCommerz), real-time Reverb WebSockets, WebRTC calling, and Scribe OpenAPI 3.0 interactive documentation.
+                            </p>
+                            <div class="space-y-2 mb-4">
+                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                    <i class="fas fa-check text-indigo-400"></i> Atomic checkout &amp; stock locking (<code class="text-indigo-300 font-mono">lockForUpdate()</code>) + State Machine
+                                </div>
+                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                    <i class="fas fa-check text-indigo-400"></i> Reverb WebSockets, WebRTC calling &amp; Scribe OpenAPI 3.0 docs
+                                </div>
+                            </div>
+                            <div class="flex flex-wrap gap-1.5 pt-2">
+                                <span class="tech-badge">Laravel 12</span>
+                                <span class="tech-badge">PHP 8.4</span>
+                                <span class="tech-badge">Modular Monolith</span>
+                                <span class="tech-badge">PHPStan L5 (0 Errors)</span>
+                                <span class="tech-badge">Laravel Reverb</span>
+                                <span class="tech-badge">WebRTC</span>
+                                <span class="tech-badge">Payment Strategy</span>
+                                <span class="tech-badge">OpenAPI / Scribe</span>
+                            </div>
+                        </div>
+                        <div
+                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                            <a href="https://github.com/sajusun/OmniCore" target="_blank" rel="noopener"
+                                class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                                <i class="fab fa-github"></i> GitHub: sajusun/OmniCore
+                            </a>
+                            <a href="projects.html#omnicore" class="text-xs text-gray-400 hover:text-white">
+                                Architecture Case Study &rarr;
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Project 2: Auction Retriever -->
                     <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
                         <div class="p-6 border-b border-white/10 flex-grow">
@@ -941,44 +985,41 @@
                         </div>
                     </div>
 
-                    <!-- Project 6: CodeStudio Enterprise -->
+                    <!-- Project 8: CodeStudio Pro -->
                     <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
                         <div class="p-6 border-b border-white/10 flex-grow">
                             <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-amber">
-                                    <i class="fas fa-circle text-amber-400 text-[8px]"></i> Open Source & Client Hub
+                                <span class="tech-badge tech-badge-cyan">
+                                    <i class="fas fa-circle text-cyan-400 text-[8px]"></i> Production Live
                                 </span>
-                                <span class="text-xs font-mono text-gray-400">Enterprise Workspace</span>
+                                <span class="text-xs font-mono text-gray-400">Next.js 16 &bull; Headless API</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">CodeStudio — Client Tracking & Real-Time
-                                Workspace</h3>
+                            <h3 class="text-2xl font-bold text-white mb-2">CodeStudio Pro — Agency Platform & Real-Time Workspace</h3>
                             <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Created a multi-service showcase platform with private client tracking workspace, live
-                                milestone progress synchronization, role-based client portals, and integrated WebSocket
-                                communication.
+                                Full-stack software agency hub and client tracking workspace. Engineered with Next.js 16 (App Router, Server Components &amp; ISR), React 19, TypeScript, and Tailwind CSS v4, connected to a high-speed headless Laravel microservice backend with Laravel Reverb WebSockets for instant notification toasts, dynamic 5-palette theme switching, and interactive quote estimation.
                             </p>
                             <div class="space-y-2 mb-4">
                                 <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-amber-400"></i> Role-based multi-tenant guard separation
+                                    <i class="fas fa-check text-cyan-400"></i> Next.js 16 ISR + dynamic product sandboxes &amp; interactive quote estimator
                                 </div>
                                 <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-amber-400"></i> Live project milestone tracking with
-                                    event queues
+                                    <i class="fas fa-check text-cyan-400"></i> Laravel Reverb WebSocket broadcasts &amp; 5-palette CSS variable theme engine
                                 </div>
                             </div>
                             <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-amber">Laravel 11</span>
-                                <span class="tech-badge tech-badge-amber">WebSockets</span>
-                                <span class="tech-badge tech-badge-amber">Redis</span>
-                                <span class="tech-badge tech-badge-amber">MySQL</span>
-                                <span class="tech-badge tech-badge-amber">Tailwind CSS</span>
+                                <span class="tech-badge tech-badge-cyan">Next.js 16</span>
+                                <span class="tech-badge tech-badge-cyan">React 19</span>
+                                <span class="tech-badge tech-badge-cyan">TypeScript</span>
+                                <span class="tech-badge tech-badge-cyan">Tailwind CSS v4</span>
+                                <span class="tech-badge tech-badge-cyan">Laravel Reverb</span>
+                                <span class="tech-badge tech-badge-cyan">Microservices</span>
                             </div>
                         </div>
                         <div
                             class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://github.com/sajusun/code-studio" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
-                                <i class="fab fa-github"></i> GitHub: sajusun/code-studio
+                            <a href="https://code-studio-pro.vercel.app" target="_blank" rel="noopener"
+                                class="text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                                <i class="fas fa-external-link-alt"></i> Visit Live: code-studio-pro.vercel.app
                             </a>
                             <a href="projects.html#code-studio" class="text-xs text-gray-400 hover:text-white">
                                 Case Study &rarr;

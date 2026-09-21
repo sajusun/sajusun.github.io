@@ -38,6 +38,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@sajusun" />
+    <meta name="twitter:creator" content="@sajusun" />
     <meta name="twitter:url" content="https://sajusun.github.io/" />
     <meta name="twitter:title" content="Sakhawat Hossain | Backend Software Engineer" />
     <meta name="twitter:description"
@@ -80,7 +82,7 @@
             "@type": "Person",
             "@id": "https://sajusun.github.io/#person",
             "name": "Sakhawat Hossain",
-            "alternateName": ["sajusun", "Saju Sun"],
+            "alternateName": ["sajusun", "Saju Sun", "Md. Sakhawat Hossain"],
             "jobTitle": "Backend Software Engineer",
             "description": "Backend Software Engineer specializing in PHP, Laravel, AWS Cloud Infrastructure, RESTful APIs, MySQL, and real-time WebSockets.",
             "url": "https://sajusun.github.io/",
@@ -91,6 +93,7 @@
             "sameAs": [
               "https://www.wikidata.org/wiki/Q141470416",
               "https://www.facebook.com/page.saju",
+              "https://x.com/sajusun",
               "https://twitter.com/sajusun",
               "https://github.com/sajusun",
               "https://linkedin.com/in/sajusun"
@@ -277,26 +280,26 @@
                         <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                             <div class="glass-panel p-3 sm:p-3.5 text-left">
                                 <div class="text-xl sm:text-2xl font-bold font-mono text-indigo-400">
-                                    30%+
+                                    35ms / &lt;180ms
                                 </div>
                                 <div class="text-[11px] sm:text-xs text-gray-400">
-                                    Query &amp; Backend Latency Optimization
+                                    p95 API &amp; DB Query Latency
                                 </div>
                             </div>
                             <div class="glass-panel p-3 sm:p-3.5 text-left">
                                 <div class="text-xl sm:text-2xl font-bold font-mono text-cyan-400">
-                                    AWS
+                                    AWS Cloud
                                 </div>
                                 <div class="text-[11px] sm:text-xs text-gray-400">
-                                    EC2, RDS, S3, ALB, SES &amp; OIDC Deployment
+                                    EC2, Aurora RDS, S3, ALB &amp; OIDC CI/CD
                                 </div>
                             </div>
                             <div class="glass-panel p-3 sm:p-3.5 text-left col-span-2 sm:col-span-1">
                                 <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400">
-                                    Enterprise
+                                    100% Concurrency
                                 </div>
                                 <div class="text-[11px] sm:text-xs text-gray-400">
-                                    Multi-Vendor, Real-Time &amp; D2C Systems
+                                    Pessimistic Row Locks &amp; State Machines
                                 </div>
                             </div>
                         </div>
@@ -326,6 +329,11 @@
                                 class="hover:text-cyan-400 flex items-center gap-2 transition-colors">
                                 <i class="fab fa-linkedin text-base sm:text-lg text-blue-400"></i>
                                 in/sajusun
+                            </a>
+                            <a href="https://x.com/sajusun" target="_blank" rel="noopener"
+                                class="hover:text-sky-400 flex items-center gap-2 transition-colors">
+                                <i class="fa-brands fa-x-twitter text-base sm:text-lg text-white"></i>
+                                @sajusun
                             </a>
                             <span class="hidden sm:inline text-gray-600">|</span>
                             <span class="hidden sm:inline flex items-center gap-1 text-gray-400">
@@ -616,24 +624,25 @@
                                 MyBergo — Multi-Vendor Property Booking Platform
                             </h3>
                             <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Architected an enterprise multi-tenant booking ecosystem
-                                operating across 3 dedicated portals (Guest Booking Engine
-                                <span class="text-emerald-400 font-semibold">mybergo.com</span>, alongside separate
-                                dedicated Property Host Operations and
-                                Central Super Admin governance panels) on AWS EC2 &amp; ALB
-                                with Amazon Aurora RDS (MySQL cluster). Features zero-secret
-                                GitHub Actions SSM OIDC CI/CD, direct S3 presigned uploads,
-                                and dynamic Intervention Image v4 compression.
+                                Architected an enterprise multi-tenant booking ecosystem operating across 3 dedicated portals on AWS EC2 &amp; ALB with Amazon Aurora RDS cluster. Features pessimistic row locking eliminating double-booking race conditions, direct-to-S3 presigned uploads, and passwordless GitHub Actions SSM OIDC deployments.
                             </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-indigo-400"></i> AWS EC2 + ALB +
-                                    Amazon Aurora RDS &amp; GitHub Actions SSM OIDC CI/CD
+                            <!-- Quantitative Metrics Grid -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-emerald-400 block">&lt;180ms</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">p95 Latency</span>
                                 </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-indigo-400"></i> S3 presigned
-                                    direct uploads, Intervention Image v4 compression &amp;
-                                    Reverb sockets
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-indigo-400 block">100%</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Race-Free</span>
+                                </div>
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-cyan-400 block">-78%</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">WebP Size</span>
+                                </div>
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-amber-400 block">0-Secret</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">OIDC CI/CD</span>
                                 </div>
                             </div>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -654,8 +663,8 @@
                                 <i class="fas fa-external-link-alt"></i> Visit Live:
                                 mybergo.com
                             </a>
-                            <a href="projects.html#mybergo" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
+                            <a href="projects.html#mybergo" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
                             </a>
                         </div>
                     </div>
@@ -671,29 +680,28 @@
                                 <span class="text-xs font-mono text-gray-400">Modular Monolith &bull; PHP 8.4</span>
                             </div>
                             <h3 class="text-2xl font-bold text-white mb-2">
-                                OmniCore — Modular Monolith & Concurrency-Safe E-Commerce
-                                Engine
+                                OmniCore — Modular Monolith & Concurrency-Safe E-Commerce Engine
                             </h3>
                             <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Engineered a production-grade enterprise backend ecosystem
-                                built on Laravel 12 &amp; PHP 8.4 utilizing Domain-Driven
-                                Design (DDD). Features atomic checkout with row-level
-                                pessimistic locking (<code
-                                    class="text-indigo-300 font-mono text-xs">lockForUpdate()</code>) preventing race
-                                conditions, Cartesian product variant
-                                generator, multi-gateway payment strategy (Stripe, PayPal,
-                                bKash, SSLCommerz), real-time Reverb WebSockets, WebRTC
-                                calling, and Scribe OpenAPI 3.0 interactive documentation.
+                                Engineered an enterprise Modular Monolith backend on Laravel 12 &amp; PHP 8.4 utilizing Domain-Driven Design (DDD). Features atomic checkout with row-level pessimistic locking (<code class="text-indigo-300 font-mono text-xs">lockForUpdate()</code>), Cartesian product variant generator, payment strategy pattern, real-time Reverb WebSockets, and Scribe OpenAPI 3.0 documentation.
                             </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-indigo-400"></i> Atomic checkout
-                                    &amp; stock locking (<code class="text-indigo-300 font-mono">lockForUpdate()</code>)
-                                    + State Machine
+                            <!-- Quantitative Metrics Grid -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-cyan-400 block">35ms</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Catalog Query</span>
                                 </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-indigo-400"></i> Reverb
-                                    WebSockets, WebRTC calling &amp; Scribe OpenAPI 3.0 docs
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-emerald-400 block">0 Errors</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">PHPStan L5</span>
+                                </div>
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-indigo-400 block">100%</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Idempotent</span>
+                                </div>
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-amber-400 block">&lt;50ms</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Reverb Sync</span>
                                 </div>
                             </div>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -713,8 +721,8 @@
                                 class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
                                 <i class="fab fa-github"></i> GitHub: sajusun/OmniCore
                             </a>
-                            <a href="projects.html#omnicore" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
+                            <a href="projects.html#omnicore" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
                             </a>
                         </div>
                     </div>
@@ -724,8 +732,7 @@
                         <div class="p-6 border-b border-white/10 flex-grow">
                             <div class="flex items-center justify-between mb-3">
                                 <span class="tech-badge tech-badge-amber">
-                                    <i class="fas fa-circle text-amber-400 text-[8px]"></i> USA
-                                    Production Live
+                                    <i class="fas fa-circle text-amber-400 text-[8px]"></i> USA Production Live
                                 </span>
                                 <span class="text-xs font-mono text-gray-400">Scraping &amp; Real Estate SaaS</span>
                             </div>
@@ -733,22 +740,25 @@
                                 Auction Retriever — Property Auction Scraping Engine
                             </h3>
                             <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Architected the automated multi-source scraping engine and
-                                GraphQL backend aggregating thousands of real estate and land
-                                auction deals across the US. Features DomCrawler queue
-                                pipelines, Lighthouse GraphQL search, Stripe Cashier
-                                subscriptions, and weekly investor digests.
+                                Architected the automated multi-source scraping engine and GraphQL backend aggregating thousands of real estate and land auction deals across the US. Features error-isolated DomCrawler queue pipelines, Lighthouse GraphQL search, Stripe Cashier subscriptions, and weekly investor digests.
                             </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-amber-400"></i> Automated
-                                    scraping pipelines (DomCrawler, Guzzle &amp; error-isolated
-                                    queues)
+                            <!-- Quantitative Metrics Grid -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-amber-400 block">50,000+</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Listings/Day</span>
                                 </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-amber-400"></i> Schema-first
-                                    GraphQL API, Stripe Cashier 7-day trials &amp; Reverb
-                                    sockets
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-emerald-400 block">99.8%</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Pipe Uptime</span>
+                                </div>
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-cyan-400 block">&lt;120ms</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Search Speed</span>
+                                </div>
+                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                    <span class="text-xs font-bold font-mono text-indigo-400 block">50 States</span>
+                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Coverage</span>
                                 </div>
                             </div>
                             <div class="flex flex-wrap gap-1.5 pt-2">
@@ -768,8 +778,8 @@
                                 <i class="fas fa-external-link-alt"></i> Visit Live:
                                 auctionretriever.com
                             </a>
-                            <a href="projects.html#auctionretriever" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
+                            <a href="projects.html#auctionretriever" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1">
+                                <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
                             </a>
                         </div>
                     </div>
@@ -1356,12 +1366,14 @@
             </div>
             <div class="flex items-center gap-6 text-gray-400">
                 <a href="https://github.com/sajusun" target="_blank" rel="noopener"
-                    class="hover:text-white transition-colors"><i class="fab fa-github text-lg"></i></a>
+                    class="hover:text-white transition-colors" aria-label="GitHub"><i class="fab fa-github text-lg"></i></a>
                 <a href="https://linkedin.com/in/sajusun" target="_blank" rel="noopener"
-                    class="hover:text-cyan-400 transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
-                <a href="mailto:backend.sakhawat@gmail.com" class="hover:text-indigo-400 transition-colors"><i
+                    class="hover:text-cyan-400 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin text-lg"></i></a>
+                <a href="https://x.com/sajusun" target="_blank" rel="noopener"
+                    class="hover:text-white transition-colors" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="mailto:backend.sakhawat@gmail.com" class="hover:text-indigo-400 transition-colors" aria-label="Email"><i
                         class="fas fa-envelope text-lg"></i></a>
-                <a href="tel:+8801580349431" class="hover:text-emerald-400 transition-colors"><i
+                <a href="tel:+8801580349431" class="hover:text-emerald-400 transition-colors" aria-label="Phone"><i
                         class="fas fa-phone text-lg"></i></a>
             </div>
         </div>

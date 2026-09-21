@@ -63,3 +63,4 @@ portfolio/
 - **WhatsApp / Phone**: [+880 1580-349431](https://wa.me/8801580349431)
 - **LinkedIn**: [linkedin.com/in/sajusun](https://linkedin.com/in/sajusun)
 - **GitHub**: [github.com/sajusun](https://github.com/sajusun)
+- **X (Twitter)**: [x.com/sajusun](https://x.com/sajusun)

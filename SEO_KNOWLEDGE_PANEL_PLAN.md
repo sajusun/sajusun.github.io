@@ -51,6 +51,7 @@
   "sameAs": [
     "https://github.com/sajusun",
     "https://linkedin.com/in/sajusun",
+    "https://x.com/sajusun",
     "https://twitter.com/sajusun",
     "https://facebook.com/sajusun",
     "https://instagram.com/sajusun"

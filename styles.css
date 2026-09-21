@@ -772,3 +772,243 @@ a {
   background: #f1f5f9;
   border-color: #cbd5e1 !important;
 }
+
+/* ==========================================================================
+   SYSTEM ARCHITECTURE MODAL & ENGINEERING METRICS STYLES
+   ========================================================================== */
+
+/* Architecture Action Button */
+.btn-architecture {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.15rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  color: #818cf8;
+  font-weight: 600;
+  font-size: 0.825rem;
+  font-family: var(--font-mono);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.1);
+}
+
+.btn-architecture:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.3) 0%, rgba(6, 182, 212, 0.3) 100%);
+  border-color: rgba(99, 102, 241, 0.8);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+}
+
+[data-theme="light"] .btn-architecture {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #4f46e5;
+}
+
+[data-theme="light"] .btn-architecture:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(6, 182, 212, 0.15) 100%);
+  color: #3730a3;
+}
+
+/* Architecture Modal Backdrop & Container */
+.arch-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(3, 7, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.arch-modal-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.arch-modal-dialog {
+  background: #0b0f19;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1.25rem;
+  width: 100%;
+  max-width: 64rem;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 35px rgba(99, 102, 241, 0.15);
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+[data-theme="light"] .arch-modal-dialog {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2), 0 0 35px rgba(99, 102, 241, 0.08);
+}
+
+.arch-modal-backdrop.active .arch-modal-dialog {
+  transform: scale(1) translateY(0);
+}
+
+/* Modal Header */
+.arch-modal-header {
+  padding: 1.25rem 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.01);
+}
+
+[data-theme="light"] .arch-modal-header {
+  border-bottom-color: #e2e8f0;
+  background: #f8fafc;
+}
+
+/* Architecture Tabs */
+.arch-tab-btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: #94a3b8;
+  border-radius: 0.5rem;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.arch-tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.arch-tab-btn.active {
+  color: #67e8f9;
+  background: rgba(6, 182, 212, 0.1);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+[data-theme="light"] .arch-tab-btn {
+  color: #64748b;
+}
+
+[data-theme="light"] .arch-tab-btn:hover {
+  color: #0f172a;
+  background: #f1f5f9;
+}
+
+[data-theme="light"] .arch-tab-btn.active {
+  color: #0891b2;
+  background: rgba(6, 182, 212, 0.12);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+/* Architecture Blueprint Canvas */
+.arch-blueprint-canvas {
+  background-color: #080c14;
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(to right, rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px, 40px 40px, 40px 40px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="light"] .arch-blueprint-canvas {
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(to right, rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+  border-color: #e2e8f0;
+}
+
+/* Architecture Node Components */
+.arch-node {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  padding: 0.85rem;
+  transition: all 0.25s ease;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.arch-node:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
+}
+
+[data-theme="light"] .arch-node {
+  background: #ffffff;
+  border-color: #e2e8f0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .arch-node:hover {
+  border-color: #6366f1;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.12);
+}
+
+/* Animated Pulse Line / Connectors */
+@keyframes flowDash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+
+.flow-active-line {
+  stroke-dasharray: 6, 4;
+  animation: flowDash 1s linear infinite;
+}
+
+/* Metric Highlight Cards in Grid */
+.metric-pill {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.625rem;
+  padding: 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  transition: all 0.2s ease;
+}
+
+.metric-pill:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(99, 102, 241, 0.04);
+}
+
+[data-theme="light"] .metric-pill {
+  background: #f8fafc;
+  border-color: #e2e8f0;
+}
+
+[data-theme="light"] .metric-pill:hover {
+  border-color: #6366f1;
+  background: #f1f5f9;
+}
+

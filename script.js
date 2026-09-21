@@ -204,4 +204,84 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 8. System Architecture Modal Management
+  const archButtons = document.querySelectorAll('.btn-architecture');
+  const archModals = document.querySelectorAll('.arch-modal-backdrop');
+
+  function openArchModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeArchModal(modal) {
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function closeAllArchModals() {
+    archModals.forEach(modal => {
+      closeArchModal(modal);
+    });
+  }
+
+  archButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetModalId = btn.getAttribute('data-target-modal');
+      if (targetModalId) {
+        openArchModal(targetModalId);
+      }
+    });
+  });
+
+  // Modal close handlers (close button & backdrop click)
+  archModals.forEach(modal => {
+    const closeBtns = modal.querySelectorAll('.arch-modal-close');
+    closeBtns.forEach(cBtn => {
+      cBtn.addEventListener('click', () => {
+        closeArchModal(modal);
+      });
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        closeArchModal(modal);
+      }
+    });
+
+    // Tab switching inside modal
+    const tabBtns = modal.querySelectorAll('.arch-tab-btn');
+    const tabPanels = modal.querySelectorAll('.arch-tab-panel');
+
+    tabBtns.forEach(tabBtn => {
+      tabBtn.addEventListener('click', () => {
+        const targetPanelId = tabBtn.getAttribute('data-tab-target');
+        
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabBtn.classList.add('active');
+
+        tabPanels.forEach(panel => {
+          if (panel.id === targetPanelId) {
+            panel.classList.remove('hidden');
+          } else {
+            panel.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+
+  // ESC key to close modal
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeAllArchModals();
+    }
+  });
 });
+

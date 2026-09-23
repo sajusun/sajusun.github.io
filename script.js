@@ -170,38 +170,74 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 7. Contact Form Handling (Live Google Apps Script & Google Sheets Integration)
-  const contactForm = document.getElementById('contact-form');
+  // 7. Contact Page Form Tabs & Google Apps Script Integration
+  const tabBtnMessage = document.getElementById('tab-btn-message');
+  const tabBtnQuote = document.getElementById('tab-btn-quote');
+  const panelMessage = document.getElementById('form-panel-message');
+  const panelQuote = document.getElementById('form-panel-quote');
+
+  if (tabBtnMessage && tabBtnQuote && panelMessage && panelQuote) {
+    const activateMessageTab = () => {
+      tabBtnMessage.classList.add('active');
+      tabBtnQuote.classList.remove('active');
+      panelMessage.classList.remove('hidden');
+      panelQuote.classList.add('hidden');
+    };
+
+    const activateQuoteTab = () => {
+      tabBtnQuote.classList.add('active');
+      tabBtnMessage.classList.remove('active');
+      panelQuote.classList.remove('hidden');
+      panelMessage.classList.add('hidden');
+    };
+
+    tabBtnMessage.addEventListener('click', activateMessageTab);
+    tabBtnQuote.addEventListener('click', activateQuoteTab);
+
+    // Auto-open quote tab if URL has hash or parameter #quote / ?tab=quote
+    const urlParams = new URLSearchParams(window.location.search);
+    if (window.location.hash === '#quote' || window.location.hash === '#quote-form' || urlParams.get('tab') === 'quote') {
+      activateQuoteTab();
+    }
+  }
+
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7cfKUkSEf8HONShmBRTvDyc7EgNgi_50QE072MzX9Xue99XpSi5F2UMkUtireaW3k/exec';
+  const ajaxForms = document.querySelectorAll('.contact-ajax-form');
 
-  if (contactForm) {
-    contactForm.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      const submitBtn = contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.innerHTML;
+  if (ajaxForms.length > 0) {
+    ajaxForms.forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        const formType = form.querySelector('input[name="form_type"]')?.value || 'Message';
 
-      submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending message...';
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Submitting...';
 
-      const formData = new FormData(contactForm);
+        const formData = new FormData(form);
 
-      try {
-        await fetch(GOOGLE_SCRIPT_URL, {
-          method: 'POST',
-          body: formData,
-          mode: 'no-cors' // Allows cross-origin Google Apps Script request without browser blocking
-        });
+        try {
+          await fetch(GOOGLE_SCRIPT_URL, {
+            method: 'POST',
+            body: formData,
+            mode: 'no-cors' // Cross-origin Google Apps Script mode
+          });
 
-        // Feedback to user
-        window.showToast('Thank you! Your message has been sent successfully.', true);
-        contactForm.reset();
-      } catch (error) {
-        console.error('Submission error:', error);
-        window.showToast('Failed to send message. Please email me directly.', false);
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalText;
-      }
+          if (formType === 'Quote') {
+            window.showToast('Quote request submitted! I will get back to you with an estimate shortly.', true);
+          } else {
+            window.showToast('Thank you! Your message has been sent successfully.', true);
+          }
+          form.reset();
+        } catch (error) {
+          console.error('Submission error:', error);
+          window.showToast('Failed to send. Please reach out via Email or WhatsApp directly.', false);
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalText;
+        }
+      });
     });
   }
 

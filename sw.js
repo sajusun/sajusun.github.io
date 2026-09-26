@@ -2,22 +2,24 @@
 const CACHE_NAME = 'sakhawat-portfolio-v1.1';
 
 const PRECACHE_ASSETS = [
-  '/',
-  '/index.html',
-  '/services.html',
-  '/projects.html',
-  '/articles.html',
-  '/resume.html',
-  '/contact.html',
-  '/404.html',
-  '/styles.css',
-  '/script.js',
-  '/manifest.json',
-  '/assets/images/favicon.svg',
-  '/assets/images/favicon.png',
-  '/assets/images/apple-touch-icon.png',
-  '/assets/images/og-preview.png',
-  '/assets/images/sakhawat-hossain-as-saju-sun.jpg'
+  './',
+  './index.html',
+  './services.html',
+  './projects.html',
+  './articles.html',
+  './resume.html',
+  './contact.html',
+  './404.html',
+  './styles.css',
+  './script.js',
+  './manifest.json',
+  './assets/images/favicon.svg',
+  './assets/images/favicon.png',
+  './assets/images/apple-touch-icon.png',
+  './assets/images/icon-192.png',
+  './assets/images/icon-512.png',
+  './assets/images/og-preview.png',
+  './assets/images/sakhawat-hossain-as-saju-sun.jpg'
 ];
 
 // Install Event: Precaching critical shell assets

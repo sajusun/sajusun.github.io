@@ -1,9 +1,10 @@
 {
+  "id": "sakhawat-portfolio-app",
   "name": "Sakhawat Hossain | Backend Software Engineer",
   "short_name": "Sakhawat CV",
   "description": "Portfolio and Engineering Services of Sakhawat Hossain, Backend Software Engineer specializing in Laravel, PHP, AWS Cloud, and High-Scale APIs.",
-  "start_url": "/index.html",
-  "scope": "/",
+  "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#090d16",
   "theme_color": "#090d16",
@@ -11,22 +12,22 @@
   "categories": ["business", "developer", "productivity"],
   "icons": [
     {
-      "src": "assets/images/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "assets/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "assets/images/favicon.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "assets/images/apple-touch-icon.png",
+      "src": "assets/images/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "shortcuts": [
@@ -34,29 +35,36 @@
       "name": "View Services",
       "short_name": "Services",
       "description": "Engineering Services & Solutions",
-      "url": "/services.html",
-      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+      "url": "./services.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Projects & Case Studies",
       "short_name": "Projects",
       "description": "Explore live enterprise systems and architectures",
-      "url": "/projects.html",
-      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+      "url": "./projects.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Engineering Log",
+      "short_name": "Articles",
+      "description": "Deep-dives into backend system design",
+      "url": "./articles.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Resume / CV",
       "short_name": "Resume",
       "description": "ATS-friendly resume and technical background",
-      "url": "/resume.html",
-      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+      "url": "./resume.html",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "Request a Quote",
       "short_name": "Get Quote",
       "description": "Get project estimation or contact directly",
-      "url": "/contact.html?tab=quote#quote",
-      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+      "url": "./contact.html?tab=quote#quote",
+      "icons": [{ "src": "assets/images/icon-192.png", "sizes": "192x192" }]
     }
   ]
 }

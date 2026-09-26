@@ -332,11 +332,40 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 9. PWA Service Worker Registration
+  // 9. PWA Service Worker Registration & Install Prompt
+  let deferredInstallPrompt = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    console.log('[PWA] beforeinstallprompt event captured');
+
+    // Show custom install button if element exists
+    const installBtns = document.querySelectorAll('.pwa-install-btn');
+    installBtns.forEach(btn => {
+      btn.classList.remove('hidden');
+      btn.addEventListener('click', async () => {
+        if (deferredInstallPrompt) {
+          deferredInstallPrompt.prompt();
+          const { outcome } = await deferredInstallPrompt.userChoice;
+          console.log('[PWA] User response:', outcome);
+          deferredInstallPrompt = null;
+          btn.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  window.addEventListener('appinstalled', () => {
+    console.log('[PWA] App successfully installed!');
+    window.showToast('Thank you for installing Sakhawat Portfolio App!', true);
+    deferredInstallPrompt = null;
+  });
+
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('/sw.js')
+      navigator.serviceWorker.register('./sw.js')
         .then((reg) => {
+          console.log('[PWA] Service Worker registered with scope:', reg.scope);
           // Check for worker updates
           reg.onupdatefound = () => {
             const installingWorker = reg.installing;

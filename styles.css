@@ -722,7 +722,8 @@ a {
   background-color: #f1f5f9 !important;
 }
 
-[data-theme="light"] .bg-black\/40 {
+[data-theme="light"] .bg-black\/40,
+[data-theme="light"] .bg-black\/50 {
   background-color: #ffffff !important;
 }
 
@@ -745,23 +746,68 @@ a {
   color: #94a3b8 !important;
 }
 
-/* Hero Terminal Card Styling (Keep crisp dark code terminal look in both themes) */
-.terminal-card {
-  background: #0f172a !important;
-  border: 1px solid #1e293b !important;
+/* Hero Terminal Card & Code Snippet Box (Keep crisp dark code terminal look in both themes) */
+.terminal-card,
+.terminal-box {
+  background: #090d16 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
-.terminal-card * {
+[data-theme="light"] .terminal-card,
+[data-theme="light"] .terminal-box {
+  background: #0b1120 !important;
+  border: 1px solid #1e293b !important;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.15) !important;
+}
+.terminal-card *,
+.terminal-box * {
   color: inherit;
 }
-.terminal-card .text-emerald-400 { color: #34d399 !important; }
-.terminal-card .text-amber-300 { color: #fcd34d !important; }
-.terminal-card .text-cyan-300 { color: #67e8f9 !important; }
-.terminal-card .text-cyan-400 { color: #22d3ee !important; }
-.terminal-card .text-indigo-400 { color: #818cf8 !important; }
-.terminal-card .text-indigo-300 { color: #a5b4fc !important; }
-.terminal-card .text-green-400 { color: #4ade80 !important; }
-.terminal-card .text-gray-300 { color: #cbd5e1 !important; }
-.terminal-card .text-gray-400 { color: #94a3b8 !important; }
+.terminal-card .text-emerald-400,
+.terminal-box .text-emerald-400 { color: #34d399 !important; }
+.terminal-card .text-emerald-300,
+.terminal-box .text-emerald-300 { color: #6ee7b7 !important; }
+.terminal-card .text-amber-300,
+.terminal-box .text-amber-300 { color: #fcd34d !important; }
+.terminal-card .text-amber-400,
+.terminal-box .text-amber-400 { color: #fbbf24 !important; }
+.terminal-card .text-cyan-300,
+.terminal-box .text-cyan-300 { color: #67e8f9 !important; }
+.terminal-card .text-cyan-400,
+.terminal-box .text-cyan-400 { color: #22d3ee !important; }
+.terminal-card .text-indigo-400,
+.terminal-box .text-indigo-400 { color: #818cf8 !important; }
+.terminal-card .text-indigo-300,
+.terminal-box .text-indigo-300 { color: #a5b4fc !important; }
+.terminal-card .text-purple-400,
+.terminal-box .text-purple-400 { color: #c084fc !important; }
+.terminal-card .text-purple-300,
+.terminal-box .text-purple-300 { color: #d8b4fe !important; }
+.terminal-card .text-green-400,
+.terminal-box .text-green-400 { color: #4ade80 !important; }
+.terminal-card .text-gray-200,
+.terminal-box .text-gray-200 { color: #e2e8f0 !important; }
+.terminal-card .text-gray-300,
+.terminal-box .text-gray-300 { color: #cbd5e1 !important; }
+.terminal-card .text-gray-400,
+.terminal-box .text-gray-400 { color: #94a3b8 !important; }
+.terminal-card .text-white,
+.terminal-box .text-white { color: #f8fafc !important; }
+
+/* Inline Code Element Styling */
+code:not(.terminal-box code, .terminal-card code) {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85em;
+  padding: 0.15em 0.4em;
+  border-radius: 0.375rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #a5b4fc;
+}
+[data-theme="light"] code:not(.terminal-box code, .terminal-card code) {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #4f46e5;
+}
 
 /* Theme Toggle Button */
 .theme-toggle-btn {

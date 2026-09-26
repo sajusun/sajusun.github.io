@@ -18,6 +18,13 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
 
+    <!-- PWA & Mobile Meta Tags -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#090d16">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Sakhawat Hossain">
+
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://sajusun.github.io/projects.html">
@@ -204,15 +211,17 @@
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-1">
                 <a href="index.html" class="nav-link">Home</a>
-                <a href="projects.html" class="nav-link active">Projects &amp; Case Studies</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link active">Projects</a>
+                <a href="articles.html" class="nav-link">Engineering Log</a>
                 <a href="resume.html" class="nav-link">Resume / CV</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="resume.html" class="btn-primary text-sm py-2 px-4">
-                    <i class="fas fa-file-pdf"></i> View Resume
+                <a href="contact.html?tab=quote#quote" class="btn-primary text-sm py-2 px-4 !bg-emerald-600 hover:!bg-emerald-700">
+                    <i class="fas fa-file-invoice-dollar mr-1"></i> Request Quote
                 </a>
                 <button class="theme-toggle-btn p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
                     <i class="fas fa-sun text-yellow-400"></i>
@@ -233,12 +242,14 @@
         <!-- Mobile dropdown -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 pt-3 pb-5 space-y-1">
             <a href="index.html" class="mobile-nav-link"><i class="fas fa-home w-5 text-center text-indigo-400"></i> Home</a>
+            <a href="services.html" class="mobile-nav-link"><i class="fas fa-cogs w-5 text-center text-emerald-400"></i> Services &amp; Solutions</a>
             <a href="projects.html" class="mobile-nav-link active"><i class="fas fa-layer-group w-5 text-center text-indigo-400"></i> Projects &amp; Case Studies</a>
+            <a href="articles.html" class="mobile-nav-link"><i class="fas fa-book-bookmark w-5 text-center text-indigo-400"></i> Engineering Log</a>
             <a href="resume.html" class="mobile-nav-link"><i class="fas fa-file-lines w-5 text-center text-indigo-400"></i> Resume / CV</a>
             <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope w-5 text-center text-indigo-400"></i> Contact</a>
             <div class="pt-3">
-                <a href="resume.html" class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2">
-                    <i class="fas fa-file-pdf"></i> View Resume
+                <a href="contact.html?tab=quote#quote" class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2 !bg-emerald-600 hover:!bg-emerald-700">
+                    <i class="fas fa-file-invoice-dollar"></i> Request a Project Quote
                 </a>
             </div>
         </div>

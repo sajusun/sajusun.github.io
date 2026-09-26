@@ -1,0 +1,62 @@
+{
+  "name": "Sakhawat Hossain | Backend Software Engineer",
+  "short_name": "Sakhawat CV",
+  "description": "Portfolio and Engineering Services of Sakhawat Hossain, Backend Software Engineer specializing in Laravel, PHP, AWS Cloud, and High-Scale APIs.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "orientation": "portrait-primary",
+  "categories": ["business", "developer", "productivity"],
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/images/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/images/apple-touch-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "View Services",
+      "short_name": "Services",
+      "description": "Engineering Services & Solutions",
+      "url": "/services.html",
+      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Projects & Case Studies",
+      "short_name": "Projects",
+      "description": "Explore live enterprise systems and architectures",
+      "url": "/projects.html",
+      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Resume / CV",
+      "short_name": "Resume",
+      "description": "ATS-friendly resume and technical background",
+      "url": "/resume.html",
+      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Request a Quote",
+      "short_name": "Get Quote",
+      "description": "Get project estimation or contact directly",
+      "url": "/contact.html?tab=quote#quote",
+      "icons": [{ "src": "assets/images/favicon.png", "sizes": "192x192" }]
+    }
+  ]
+}

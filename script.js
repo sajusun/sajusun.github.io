@@ -194,10 +194,22 @@ document.addEventListener('DOMContentLoaded', () => {
     tabBtnMessage.addEventListener('click', activateMessageTab);
     tabBtnQuote.addEventListener('click', activateQuoteTab);
 
-    // Auto-open quote tab if URL has hash or parameter #quote / ?tab=quote
+    // Auto-open quote tab if URL has hash or parameter #quote / ?tab=quote or ?service=
     const urlParams = new URLSearchParams(window.location.search);
-    if (window.location.hash === '#quote' || window.location.hash === '#quote-form' || urlParams.get('tab') === 'quote') {
+    if (window.location.hash === '#quote' || window.location.hash === '#quote-form' || urlParams.get('tab') === 'quote' || urlParams.get('service')) {
       activateQuoteTab();
+      
+      const serviceParam = urlParams.get('service');
+      const projectTypeSelect = document.getElementById('quote-project-type');
+      if (serviceParam && projectTypeSelect) {
+        for (let i = 0; i < projectTypeSelect.options.length; i++) {
+          const optVal = projectTypeSelect.options[i].value.toLowerCase();
+          if (optVal.includes(serviceParam.toLowerCase())) {
+            projectTypeSelect.selectedIndex = i;
+            break;
+          }
+        }
+      }
     }
   }
 
@@ -319,5 +331,29 @@ document.addEventListener('DOMContentLoaded', () => {
       closeAllArchModals();
     }
   });
+
+  // 9. PWA Service Worker Registration
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/sw.js')
+        .then((reg) => {
+          // Check for worker updates
+          reg.onupdatefound = () => {
+            const installingWorker = reg.installing;
+            if (installingWorker) {
+              installingWorker.onstatechange = () => {
+                if (installingWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                  window.showToast('New version available! Refresh to update.', true);
+                }
+              };
+            }
+          };
+        })
+        .catch((err) => {
+          console.warn('[PWA] Service worker registration failed:', err);
+        });
+    });
+  }
 });
+
 

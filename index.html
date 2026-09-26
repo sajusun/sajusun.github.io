@@ -25,6 +25,13 @@
     <link rel="icon" type="image/png" href="assets/images/favicon.png" />
     <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png" />
 
+    <!-- PWA & Mobile Meta Tags -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Sakhawat Hossain" />
+
     <!-- Open Graph / Facebook / LinkedIn -->
     <meta property="og:type" content="profile" />
     <meta property="og:url" content="https://sajusun.github.io/" />
@@ -192,15 +199,17 @@
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-1">
                 <a href="index.html" class="nav-link active">Home</a>
-                <a href="projects.html" class="nav-link">Projects &amp; Case Studies</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="articles.html" class="nav-link">Engineering Log</a>
                 <a href="resume.html" class="nav-link">Resume / CV</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
 
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="resume.html" class="btn-primary text-sm py-2 px-4">
-                    <i class="fas fa-file-pdf"></i> View Resume
+                <a href="contact.html?tab=quote#quote" class="btn-primary text-sm py-2 px-4 !bg-emerald-600 hover:!bg-emerald-700">
+                    <i class="fas fa-file-invoice-dollar mr-1"></i> Request Quote
                 </a>
                 <button
                     class="theme-toggle-btn p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors"
@@ -228,9 +237,15 @@
         <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 pt-3 pb-5 space-y-1">
             <a href="index.html" class="mobile-nav-link active"><i
                     class="fas fa-home w-5 text-center text-indigo-400"></i> Home</a>
+            <a href="services.html" class="mobile-nav-link"><i
+                    class="fas fa-cogs w-5 text-center text-emerald-400"></i>
+                Services &amp; Solutions</a>
             <a href="projects.html" class="mobile-nav-link"><i
                     class="fas fa-layer-group w-5 text-center text-indigo-400"></i>
                 Projects &amp; Case Studies</a>
+            <a href="articles.html" class="mobile-nav-link"><i
+                    class="fas fa-book-bookmark w-5 text-center text-indigo-400"></i>
+                Engineering Log</a>
             <a href="resume.html" class="mobile-nav-link"><i
                     class="fas fa-file-lines w-5 text-center text-indigo-400"></i>
                 Resume / CV</a>
@@ -238,9 +253,9 @@
                     class="fas fa-envelope w-5 text-center text-indigo-400"></i>
                 Contact</a>
             <div class="pt-3">
-                <a href="resume.html"
-                    class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2">
-                    <i class="fas fa-file-pdf"></i> View Resume
+                <a href="contact.html?tab=quote#quote"
+                    class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2 !bg-emerald-600 hover:!bg-emerald-700">
+                    <i class="fas fa-file-invoice-dollar"></i> Request a Project Quote
                 </a>
             </div>
         </div>
@@ -310,7 +325,7 @@
                                 <i class="fas fa-layer-group"></i> Explore Production Projects
                             </a>
                             <a href="resume.html" class="btn-secondary">
-                                <i class="fas fa-file-download"></i> Download ATS CV
+                                <i class="fas fa-file-download"></i> Download CV
                             </a>
                             <a href="contact.html" class="btn-secondary">
                                 <i class="fas fa-paper-plane"></i> Let's Talk
@@ -581,6 +596,77 @@
                             <span class="tech-badge">Blade Engine</span>
                             <span class="tech-badge">HTML5 / CSS3</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+        <!-- Services & Solutions Overview Section -->
+        <section class="py-16 bg-gradient-to-b from-transparent to-black/30">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                    <div>
+                        <h2 class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2">
+                            Engineering Offerings
+                        </h2>
+                        <p class="text-3xl font-bold tracking-tight text-white">
+                            Services &amp; Architecture Consulting
+                        </p>
+                        <p class="text-gray-400 text-sm mt-1">
+                            Direct senior technical leadership and execution for high-growth startups, scale-ups, and agencies.
+                        </p>
+                    </div>
+                    <a href="services.html" class="text-emerald-400 hover:text-emerald-300 font-semibold text-sm flex items-center gap-1 group">
+                        Explore All 6 Services &amp; Engagement Models
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div class="glass-panel p-6 border border-white/10 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-3">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-base mb-1.5">Modular Laravel &amp; SaaS</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4">
+                                Domain-driven modular monoliths, multi-tenant databases, and resilient RESTful/Webhook APIs designed to scale without spaghetti code.
+                            </p>
+                        </div>
+                        <a href="services.html#services-list" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                            Learn more <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-panel p-6 border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-3">
+                                <i class="fab fa-aws"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-base mb-1.5">AWS Cloud &amp; CI/CD DevOps</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4">
+                                EC2, Aurora RDS, ALB load balancers, S3 storage, and secretless zero-downtime deployments via GitHub Actions &amp; AWS OIDC.
+                            </p>
+                        </div>
+                        <a href="services.html#services-list" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+                            Learn more <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-panel p-6 border border-white/10 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-3">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3 class="font-bold text-white text-base mb-1.5">Database Performance Tuning</h3>
+                            <p class="text-gray-300 text-xs leading-relaxed mb-4">
+                                Slashing p95 latency to &lt;35ms with composite indexing, EXPLAIN ANALYZE profiling, N+1 query elimination, and Redis caching.
+                            </p>
+                        </div>
+                        <a href="services.html#services-list" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+                            Learn more <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1320,6 +1406,65 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        <!-- Engineering Log Teaser Section -->
+        <section class="py-16 bg-black/20 border-t border-white/5">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                    <div>
+                        <h2 class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2">
+                            Technical Deep-Dives
+                        </h2>
+                        <p class="text-3xl font-bold tracking-tight text-white">
+                            Engineering Log &amp; Architecture Notes
+                        </p>
+                        <p class="text-gray-400 text-sm mt-1">
+                            Battle-tested notes on database tuning, zero-secret AWS deployments, and high-concurrency patterns.
+                        </p>
+                    </div>
+                    <a href="articles.html" class="text-indigo-400 hover:text-indigo-300 font-semibold text-sm flex items-center gap-1 group">
+                        Read All Architecture Notes
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <article class="glass-panel p-6 border border-white/10 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 text-xs font-mono text-gray-400 mb-2">
+                                <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Database Tuning</span>
+                                <span>• 6 min read</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 hover:text-indigo-400 transition-colors">
+                                <a href="articles.html#mysql-latency-optimization">Slashing MySQL p95 Query Latency from 850ms to 32ms in High-Throughput Laravel</a>
+                            </h3>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Profiling slow nested queries using EXPLAIN ANALYZE, building composite indexes with the leftmost prefix rule, and layering Redis cache tags.
+                            </p>
+                        </div>
+                        <a href="articles.html#mysql-latency-optimization" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                            Read technical case study <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </article>
+
+                    <article class="glass-panel p-6 border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 text-xs font-mono text-gray-400 mb-2">
+                                <span class="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">AWS &amp; DevOps</span>
+                                <span>• 5 min read</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 hover:text-cyan-400 transition-colors">
+                                <a href="articles.html#aws-oidc-github-actions">Zero-Secret AWS Deployments with GitHub Actions &amp; OpenID Connect (OIDC)</a>
+                            </h3>
+                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                Eliminating static IAM access keys in GitHub Secrets. Assuming short-lived STS credentials via cryptographic tokens for zero-downtime EC2 deployments.
+                            </p>
+                        </div>
+                        <a href="articles.html#aws-oidc-github-actions" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+                            Read technical case study <i class="fas fa-arrow-right text-[10px]"></i>
+                        </a>
+                    </article>
                 </div>
             </div>
         </section>

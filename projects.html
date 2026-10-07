@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+    <!-- Prevent Theme Flash (FOUC) -->
+    <script>
+        (function() {
+            try {
+                const storedTheme = localStorage.getItem('sakhawat_theme');
+                const theme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects & Architecture Case Studies | Sakhawat Hossain</title>
@@ -2154,18 +2164,28 @@
 
     <!-- Footer -->
     <footer class="glass-footer py-8 text-sm">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
             <div>
-                <p class="text-gray-400">&copy; 2026 <strong class="text-white">Sakhawat Hossain</strong>. All rights reserved.</p>
-                <p class="text-xs text-gray-500">Backend Software Engineer | Laravel, PHP & AWS</p>
+                <p class="text-gray-400">
+                    &copy; 2026 <strong class="text-white">Sakhawat Hossain</strong>.
+                    All rights reserved.
+                </p>
+                <p class="text-xs text-gray-500">
+                    Backend Software Engineer | Laravel, PHP &amp; AWS
+                </p>
             </div>
-            <div class="flex items-center gap-4">
-                <a href="resume.html" class="btn-primary text-xs py-1.5 px-3">
-                    <i class="fas fa-file-pdf"></i> Resume
-                </a>
-                <a href="contact.html" class="btn-secondary text-xs py-1.5 px-3">
-                    <i class="fas fa-envelope"></i> Contact
-                </a>
+            <div class="flex items-center gap-6 text-gray-400">
+                <a href="https://github.com/sajusun" target="_blank" rel="noopener"
+                    class="hover:text-white transition-colors" aria-label="GitHub"><i class="fab fa-github text-lg"></i></a>
+                <a href="https://linkedin.com/in/sajusun" target="_blank" rel="noopener"
+                    class="hover:text-cyan-400 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin text-lg"></i></a>
+                <a href="https://x.com/sajusun" target="_blank" rel="noopener"
+                    class="hover:text-white transition-colors" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="mailto:backend.sakhawat@gmail.com" class="hover:text-indigo-400 transition-colors" aria-label="Email"><i
+                        class="fas fa-envelope text-lg"></i></a>
+                <a href="tel:+8801580349431" class="hover:text-emerald-400 transition-colors" aria-label="Phone"><i
+                        class="fas fa-phone text-lg"></i></a>
             </div>
         </div>
     </footer>

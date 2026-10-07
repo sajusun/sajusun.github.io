@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+    <!-- Prevent Theme Flash (FOUC) -->
+    <script>
+        (function() {
+            try {
+                const storedTheme = localStorage.getItem('sakhawat_theme');
+                const theme = storedTheme || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', theme);
+            } catch (e) {}
+        })();
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering Log &amp; Architecture Notes | Sakhawat Hossain</title>
@@ -178,8 +188,8 @@
 
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="resume.html" class="btn-primary text-sm py-2 px-4">
-                    <i class="fas fa-file-pdf"></i> View Resume
+                <a href="contact.html?tab=quote#quote" class="btn-primary text-sm py-2 px-4 !bg-emerald-600 hover:!bg-emerald-700">
+                    <i class="fas fa-file-invoice-dollar mr-1"></i> Request Quote
                 </a>
                 <button class="theme-toggle-btn p-2 rounded-lg border border-white/10 hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
                     <i class="fas fa-sun text-yellow-400"></i>
@@ -206,8 +216,8 @@
             <a href="resume.html" class="mobile-nav-link"><i class="fas fa-file-lines w-5 text-center text-indigo-400"></i> Resume / CV</a>
             <a href="contact.html" class="mobile-nav-link"><i class="fas fa-envelope w-5 text-center text-indigo-400"></i> Contact</a>
             <div class="pt-3">
-                <a href="resume.html" class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2">
-                    <i class="fas fa-file-pdf"></i> View Resume
+                <a href="contact.html?tab=quote#quote" class="btn-primary w-full text-center text-sm py-2.5 flex items-center justify-center gap-2 !bg-emerald-600 hover:!bg-emerald-700">
+                    <i class="fas fa-file-invoice-dollar"></i> Request a Project Quote
                 </a>
             </div>
         </div>

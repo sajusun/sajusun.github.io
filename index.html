@@ -358,74 +358,69 @@
                         </div>
                     </div>
 
-                    <!-- Hero Visual / Terminal Card -->
-                    <div class="lg:col-span-5">
-                        <div
-                            class="glass-panel terminal-card p-4 sm:p-6 border border-white/10 shadow-2xl relative overflow-x-auto">
-                            <!-- Mac Terminal Dots -->
-                            <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
-                                <div class="flex items-center gap-2">
-                                    <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
-                                    <span class="w-3 h-3 rounded-full bg-yellow-500/80"></span>
-                                    <span class="w-3 h-3 rounded-full bg-green-500/80"></span>
-                                </div>
-                                <span class="text-xs font-mono text-gray-400">engineer@sakhawat:~$</span>
-                            </div>
+                    <!-- Hero Visual / Glowing Circular Portrait & Floating Badges -->
+                    <div class="lg:col-span-5 flex justify-center items-center">
+                        <div class="hero-portrait-container">
+                            <!-- Ambient Glowing Backdrop -->
+                            <div class="hero-portrait-glow"></div>
 
-                            <div class="space-y-4 font-mono text-xs sm:text-sm">
+                            <!-- Animated Tech Orbital Ring -->
+                            <div class="hero-orbital-ring"></div>
+
+                            <!-- Floating Badge 1: AWS & Laravel -->
+                            <div class="floating-badge floating-badge-1">
+                                <div class="flex items-center gap-1.5 text-amber-400">
+                                    <i class="fab fa-aws text-lg"></i>
+                                    <i class="fab fa-laravel text-red-500 text-lg"></i>
+                                </div>
                                 <div>
-                                    <span class="text-indigo-400">const</span>
-                                    <span class="text-cyan-400">engineer</span> = {
+                                    <div class="text-xs font-bold text-white tracking-wide">AWS &amp; Laravel</div>
+                                    <div class="text-[10px] text-gray-400 font-mono">Microservices &amp; Cloud</div>
                                 </div>
-                                <div class="pl-4 space-y-1.5 text-gray-300">
-                                    <div>
-                                        <span class="text-gray-400">name:</span>
-                                        <span class="text-emerald-400">'Sakhawat Hossain'</span>,
-                                    </div>
-                                    <div>
-                                        <span class="text-gray-400">role:</span>
-                                        <span class="text-emerald-400">'Backend Software Engineer'</span>,
-                                    </div>
-                                    <div>
-                                        <span class="text-gray-400">company:</span>
-                                        <span class="text-emerald-400">'Softvence IT Ltd'</span>,
-                                    </div>
-                                    <div>
-                                        <span class="text-gray-400">coreStack:</span> [<span class="text-amber-300">'PHP
-                                            8+'</span>, <span class="text-amber-300">'Laravel 11'</span>,
-                                        <span class="text-amber-300">'AWS'</span>,
-                                        <span class="text-amber-300">'MySQL'</span>],
-                                    </div>
-                                    <div>
-                                        <span class="text-gray-400">realTime:</span> [<span
-                                            class="text-amber-300">'WebSockets'</span>, <span
-                                            class="text-amber-300">'Laravel Reverb'</span>,
-                                        <span class="text-amber-300">'Redis'</span>],
-                                    </div>
-                                    <div>
-                                        <span class="text-gray-400">architecture:</span> [<span
-                                            class="text-cyan-300">'Modular'</span>, <span
-                                            class="text-cyan-300">'SOLID'</span>,
-                                        <span class="text-cyan-300">'Service-Pattern'</span>,
-                                        <span class="text-cyan-300">'REST'</span>],
-                                    </div>
-                                    <div>
-                                        <span class="text-gray-400">databaseOptimization:</span>
-                                        <span class="text-indigo-300">'Indexing & Complex SQL Tuning'</span>,
-                                    </div>
-                                    <div>
-                                        <span class="text-gray-400">openToOpportunities:</span>
-                                        <span class="text-green-400">true</span>
-                                    </div>
-                                </div>
-                                <div>};</div>
                             </div>
 
-                            <div
-                                class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-400 font-mono">
-                                <span><i class="fas fa-bolt text-yellow-400 mr-1"></i> Production
-                                    Ready</span>
-                                <span class="text-indigo-400">OIDC / AWS Certified Workflows</span>
+                            <!-- Floating Badge 2: SEO & Core Web Vitals -->
+                            <div class="floating-badge floating-badge-2">
+                                <div class="w-7 h-7 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                                    <i class="fas fa-bolt-lightning text-xs"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-emerald-400">SEO &amp; 100% Vitals</div>
+                                    <div class="text-[10px] text-gray-400 font-mono">Semantic &amp; Clean Code</div>
+                                </div>
+                            </div>
+
+                            <!-- Main Circular Avatar -->
+                            <div class="hero-avatar-wrapper group">
+                                <img src="assets/images/sakhawat-enhanced.jpg"
+                                    alt="Sakhawat Hossain - Backend Software Engineer"
+                                    class="hero-avatar-img shadow-2xl"
+                                    width="290"
+                                    height="290"
+                                    loading="eager"
+                                    fetchpriority="high" />
+                            </div>
+
+                            <!-- Floating Badge 3: Latency Metric -->
+                            <div class="floating-badge floating-badge-3">
+                                <div class="w-7 h-7 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                                    <i class="fas fa-gauge-high text-xs"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-cyan-400 font-mono">&lt;180ms p95</div>
+                                    <div class="text-[10px] text-gray-400">Query &amp; API Latency</div>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge 4: Production Ready -->
+                            <div class="floating-badge floating-badge-4">
+                                <div class="w-7 h-7 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                                    <i class="fas fa-shield-halved text-xs"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs font-bold text-indigo-300">Production Ready</div>
+                                    <div class="text-[10px] text-gray-400 font-mono">High Concurrency</div>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   
   const currentTheme = storedTheme || (prefersDark ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', currentTheme);
+  if (document.documentElement.getAttribute('data-theme') !== currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+  }
   updateThemeIcons(currentTheme);
 
   themeToggleButtons.forEach(btn => {
@@ -89,12 +91,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    // Auto-close on resize to desktop (>= 768px)
+    // Auto-close on resize to desktop (>= 768px) with requestAnimationFrame throttle (avoids forced reflow)
+    let resizeRaf = null;
     window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
-        toggleMenu(false);
-      }
-    });
+      if (resizeRaf) cancelAnimationFrame(resizeRaf);
+      resizeRaf = requestAnimationFrame(() => {
+        if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+          toggleMenu(false);
+        }
+      });
+    }, { passive: true });
   }
 
   // 3. Toast Notifications
@@ -155,15 +161,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // 6. Back to Top Button
   const backToTopBtn = document.getElementById('back-to-top');
   if (backToTopBtn) {
+    let scrollTicking = false;
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        backToTopBtn.classList.remove('opacity-0', 'invisible');
-        backToTopBtn.classList.add('opacity-100', 'visible');
-      } else {
-        backToTopBtn.classList.add('opacity-0', 'invisible');
-        backToTopBtn.classList.remove('opacity-100', 'visible');
+      if (!scrollTicking) {
+        requestAnimationFrame(() => {
+          if (window.scrollY > 400) {
+            backToTopBtn.classList.remove('opacity-0', 'invisible');
+            backToTopBtn.classList.add('opacity-100', 'visible');
+          } else {
+            backToTopBtn.classList.add('opacity-0', 'invisible');
+            backToTopBtn.classList.remove('opacity-100', 'visible');
+          }
+          scrollTicking = false;
+        });
+        scrollTicking = true;
       }
-    });
+    }, { passive: true });
 
     backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });

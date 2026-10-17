@@ -2,6 +2,9 @@
 <html lang="en" data-theme="dark">
 
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Prevent Theme Flash (FOUC) -->
     <script>
         (function() {
@@ -12,8 +15,6 @@
             } catch (e) {}
         })();
     </script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
         Sakhawat Hossain (sajusun) | Backend Software Engineer (Laravel, PHP, AWS)
     </title>
@@ -29,6 +30,9 @@
     <meta name="author" content="Sakhawat Hossain" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sajusun.github.io/" />
+
+    <!-- Preload Critical LCP Hero Image -->
+    <link rel="preload" as="image" href="assets/images/sakhawat-enhanced.jpg" fetchpriority="high" />
 
     <!-- Google Fonts Preconnect & High-Performance Non-Blocking Load -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1542,8 +1546,8 @@
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+    <!-- JavaScript (Deferred Non-blocking Load) -->
+    <script src="script.js" defer></script>
 </body>
 
 </html>

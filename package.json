@@ -1,0 +1,11 @@
+{
+  "name": "sajusun-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Sakhawat Hossain - Backend Software Engineer",
+  "scripts": {
+    "build:css": "npx -y tailwindcss@3.4.17 -i tailwind-input.css -o tailwind.min.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

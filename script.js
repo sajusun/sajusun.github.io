@@ -424,22 +424,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   }
-
-  // 10. High-Performance Font Awesome Loader (Loaded after initial paint to eliminate render blocking & unused CSS)
-  function loadFontAwesome() {
-    if (!document.getElementById('fa-cdn-stylesheet')) {
-      const faLink = document.createElement('link');
-      faLink.id = 'fa-cdn-stylesheet';
-      faLink.rel = 'stylesheet';
-      faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
-      document.head.appendChild(faLink);
-    }
-  }
-  if (document.readyState === 'complete') {
-    loadFontAwesome();
-  } else {
-    window.addEventListener('load', loadFontAwesome);
-  }
 });
 
 

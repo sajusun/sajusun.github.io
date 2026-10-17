@@ -13,15 +13,20 @@
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Log &amp; Architecture Notes | Sakhawat Hossain</title>
+    <title>Engineering Log & Architecture Notes | Sakhawat Hossain</title>
     
     <!-- SEO Meta Tags -->
-    <meta name="title" content="Engineering Log &amp; Architecture Notes | Sakhawat Hossain">
+    <meta name="title" content="Engineering Log & Architecture Notes | Sakhawat Hossain">
     <meta name="description" content="Technical deep-dives on MySQL database optimization, AWS OIDC CI/CD deployment, modular Laravel architecture, and high-concurrency Redis locking by Sakhawat Hossain.">
     <meta name="keywords" content="Laravel Architecture Blog, MySQL Query Optimization, AWS OIDC GitHub Actions, Redis Distributed Locks, High Concurrency Laravel, Backend Engineering Case Studies">
     <meta name="author" content="Sakhawat Hossain">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://sajusun.github.io/articles.html">
+
+    <!-- Google Fonts Preconnect & High-Performance Load -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- PWA & Mobile Meta Tags -->
     <link rel="manifest" href="manifest.json">
@@ -130,29 +135,45 @@
             {
               "@type": "BlogPosting",
               "headline": "Slashing MySQL p95 Query Latency from 850ms to 32ms in High-Throughput Laravel",
+              "url": "https://sajusun.github.io/articles.html#mysql-latency-optimization",
+              "mainEntityOfPage": "https://sajusun.github.io/articles.html#mysql-latency-optimization",
+              "image": "https://sajusun.github.io/assets/images/og-preview.png",
               "datePublished": "2026-02-15",
               "author": { "@id": "https://sajusun.github.io/#person" },
+              "publisher": { "@id": "https://sajusun.github.io/#person" },
               "description": "Practical lessons on resolving N+1 queries, composite index selectivity, and Redis cache layer design."
             },
             {
               "@type": "BlogPosting",
               "headline": "Zero-Secret AWS Deployments with GitHub Actions & OpenID Connect (OIDC)",
+              "url": "https://sajusun.github.io/articles.html#aws-oidc-github-actions",
+              "mainEntityOfPage": "https://sajusun.github.io/articles.html#aws-oidc-github-actions",
+              "image": "https://sajusun.github.io/assets/images/og-preview.png",
               "datePublished": "2026-01-20",
               "author": { "@id": "https://sajusun.github.io/#person" },
+              "publisher": { "@id": "https://sajusun.github.io/#person" },
               "description": "Eliminating static IAM access keys in CI/CD by assuming IAM roles through temporary cryptographic OIDC tokens."
             },
             {
               "@type": "BlogPosting",
               "headline": "Designing Modular Monoliths in Laravel for Rapid Growth Without Spaghetti Code",
+              "url": "https://sajusun.github.io/articles.html#modular-monolith-laravel",
+              "mainEntityOfPage": "https://sajusun.github.io/articles.html#modular-monolith-laravel",
+              "image": "https://sajusun.github.io/assets/images/og-preview.png",
               "datePublished": "2025-11-10",
               "author": { "@id": "https://sajusun.github.io/#person" },
+              "publisher": { "@id": "https://sajusun.github.io/#person" },
               "description": "How to structure business domains into decoupled modules inside a single repository before jumping into microservices."
             },
             {
               "@type": "BlogPosting",
               "headline": "Preventing Concurrency Race Conditions and Double-Spending with Redis Atomic Locks",
+              "url": "https://sajusun.github.io/articles.html#redis-concurrency-locks",
+              "mainEntityOfPage": "https://sajusun.github.io/articles.html#redis-concurrency-locks",
+              "image": "https://sajusun.github.io/assets/images/og-preview.png",
               "datePublished": "2025-09-04",
               "author": { "@id": "https://sajusun.github.io/#person" },
+              "publisher": { "@id": "https://sajusun.github.io/#person" },
               "description": "Using Redis distributed locks, DB row locking (SELECT FOR UPDATE), and idempotency keys in payment & auction systems."
             }
           ]
@@ -166,7 +187,7 @@
     <!-- Navbar -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex items-center justify-between py-3">
-            <a href="index.html" class="flex items-center gap-2.5 sm:gap-3 group">
+            <a href="./" class="flex items-center gap-2.5 sm:gap-3 group" aria-label="Sakhawat Hossain Portfolio Home">
                 <div class="brand-emblem">
                     <span>&lt;S/&gt;</span>
                 </div>
@@ -181,7 +202,7 @@
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-1">
-                <a href="index.html" class="nav-link">Home</a>
+                <a href="./" class="nav-link">Home</a>
                 <a href="services.html" class="nav-link">Services</a>
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="articles.html" class="nav-link active">Engineering Log</a>
@@ -212,7 +233,7 @@
 
         <!-- Mobile dropdown -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 pt-3 pb-5 space-y-1">
-            <a href="index.html" class="mobile-nav-link"><i class="fas fa-home w-5 text-center text-indigo-400"></i> Home</a>
+            <a href="./" class="mobile-nav-link"><i class="fas fa-home w-5 text-center text-indigo-400"></i> Home</a>
             <a href="services.html" class="mobile-nav-link"><i class="fas fa-cogs w-5 text-center text-emerald-400"></i> Services &amp; Solutions</a>
             <a href="projects.html" class="mobile-nav-link"><i class="fas fa-layer-group w-5 text-center text-indigo-400"></i> Projects &amp; Case Studies</a>
             <a href="articles.html" class="mobile-nav-link active"><i class="fas fa-book-bookmark w-5 text-center text-indigo-400"></i> Engineering Log</a>

@@ -213,6 +213,36 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  // 4.1 Services Category Filtering (services.html)
+  const filterTabsContainer = document.getElementById('services-filter-tabs');
+  const serviceCards = document.querySelectorAll('[data-service-card]');
+
+  if (filterTabsContainer && serviceCards.length > 0) {
+    const filterButtons = filterTabsContainer.querySelectorAll('.service-filter-btn');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const selectedFilter = btn.getAttribute('data-filter');
+
+        // Update button active styles
+        filterButtons.forEach(b => {
+          b.className = 'service-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10';
+        });
+        btn.className = 'service-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-600/30';
+
+        // Filter cards with smooth visibility
+        serviceCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (selectedFilter === 'all' || category === selectedFilter) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  }
+
   const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz7cfKUkSEf8HONShmBRTvDyc7EgNgi_50QE072MzX9Xue99XpSi5F2UMkUtireaW3k/exec';
   const ajaxForms = document.querySelectorAll('.contact-ajax-form');
 

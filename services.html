@@ -342,10 +342,26 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Interactive Service Category Filters -->
+                <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" id="services-filter-tabs">
+                    <button type="button" data-filter="all" class="service-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-indigo-600 text-white shadow-lg shadow-indigo-600/30">
+                        All Services (9)
+                    </button>
+                    <button type="button" data-filter="backend" class="service-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10">
+                        Backend &amp; Cloud (5)
+                    </button>
+                    <button type="button" data-filter="frontend-mobile" class="service-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10">
+                        Frontend &amp; Mobile (2)
+                    </button>
+                    <button type="button" data-filter="seo-audit" class="service-filter-btn px-4 py-2 rounded-full text-xs font-semibold transition-all bg-white/5 hover:bg-white/10 text-gray-300 border border-white/10">
+                        SEO &amp; Optimization (2)
+                    </button>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="services-cards-grid">
                     
                     <!-- Service 1: Modular Laravel & SaaS Architecture -->
-                    <div class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
+                    <div data-service-card data-category="backend" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
                         <div class="absolute -top-3 right-6 px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 font-bold">
                             Core Expertise
                         </div>
@@ -355,7 +371,7 @@
                             </div>
                             <h3 class="text-xl font-bold text-white mb-2">Modular Laravel &amp; SaaS Architecture</h3>
                             <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Architecting clean, domain-driven modular monoliths in Laravel 10/11/12 that scale smoothly without descending into spaghetti code.
+                                Architecting clean, domain-driven modular monoliths in Laravel that scale smoothly without descending into spaghetti code.
                             </p>
                             <div class="space-y-2 mb-6 text-xs text-gray-300">
                                 <div class="flex items-start gap-2">
@@ -380,18 +396,18 @@
                         </div>
                     </div>
 
-                    <!-- Service 2: AWS Cloud Infrastructure & DevOps -->
-                    <div class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
+                    <!-- Service 2: Cloud Infrastructure, Hosting & DevOps -->
+                    <div data-service-card data-category="backend" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
                         <div class="absolute -top-3 right-6 px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 font-bold">
-                            Cloud &amp; CI/CD
+                            AWS • VPS • Hostinger • cPanel
                         </div>
                         <div>
                             <div class="w-12 h-12 rounded-xl bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-2xl mb-5">
                                 <i class="fab fa-aws"></i>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">AWS Cloud Infrastructure &amp; DevOps</h3>
+                            <h3 class="text-xl font-bold text-white mb-2">Cloud Infrastructure, Hosting &amp; DevOps</h3>
                             <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Production deployment and automation on Amazon Web Services. Robust security, auto-recovery, and zero-downtime GitHub Actions pipelines.
+                                Production deployment and automation across high-scale AWS infrastructure as well as cost-effective Linux VPS, Hostinger Cloud, and cPanel environments.
                             </p>
                             <div class="space-y-2 mb-6 text-xs text-gray-300">
                                 <div class="flex items-start gap-2">
@@ -400,24 +416,24 @@
                                 </div>
                                 <div class="flex items-start gap-2">
                                     <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
-                                    <span>Secretless CI/CD with GitHub Actions &amp; AWS OpenID Connect (OIDC)</span>
+                                    <span>Cost-optimized Hostinger Cloud, Linux VPS, and cPanel hosting</span>
                                 </div>
                                 <div class="flex items-start gap-2">
                                     <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
-                                    <span>Nginx reverse proxy, SSL certification, and automated backup strategies</span>
+                                    <span>CI/CD pipelines, Queue Workers, Cron Scheduler, &amp; SSL setup</span>
                                 </div>
                             </div>
                         </div>
                         <div class="pt-4 border-t border-white/5">
-                            <a href="contact.html?service=AWS+Cloud+Architecture+&amp;+DevOps#quote" class="btn-secondary w-full text-center text-xs py-2.5 flex items-center justify-center gap-2 group-hover:bg-cyan-600 group-hover:text-white transition-all">
-                                <span>Get Quote for AWS Setup</span>
+                            <a href="contact.html?service=Cloud+Infrastructure,+Hosting+&amp;+DevOps#quote" class="btn-secondary w-full text-center text-xs py-2.5 flex items-center justify-center gap-2 group-hover:bg-cyan-600 group-hover:text-white transition-all">
+                                <span>Get Quote for Server &amp; Cloud Setup</span>
                                 <i class="fas fa-arrow-right text-[10px]"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Service 3: Database Tuning & Query Optimization -->
-                    <div class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
+                    <div data-service-card data-category="backend" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
                         <div class="absolute -top-3 right-6 px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
                             High Performance
                         </div>
@@ -453,7 +469,7 @@
                     </div>
 
                     <!-- Service 4: Real-time WebSockets & Event-Driven Systems -->
-                    <div class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card group">
+                    <div data-service-card data-category="backend" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card group">
                         <div>
                             <div class="w-12 h-12 rounded-xl bg-purple-500/10 text-purple-400 flex items-center justify-center text-2xl mb-5">
                                 <i class="fas fa-bolt"></i>
@@ -486,7 +502,7 @@
                     </div>
 
                     <!-- Service 5: Payment Gateways & Resilient Integrations -->
-                    <div class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card group">
+                    <div data-service-card data-category="backend" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card group">
                         <div>
                             <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-5">
                                 <i class="fas fa-credit-card"></i>
@@ -498,11 +514,11 @@
                             <div class="space-y-2 mb-6 text-xs text-gray-300">
                                 <div class="flex items-start gap-2">
                                     <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
-                                    <span>Stripe, PayPal, SSLCommerz, and localized payment gateway gateways</span>
+                                    <span>Stripe, PayPal, SSLCommerz, and localized payment gateways</span>
                                 </div>
                                 <div class="flex items-start gap-2">
                                     <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
-                                    <span>Idempotency keys, retry backoff algorithms, and webhook signature verification</span>
+                                    <span>Idempotency keys, retry backoff algorithms, and webhook verification</span>
                                 </div>
                                 <div class="flex items-start gap-2">
                                     <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
@@ -518,8 +534,116 @@
                         </div>
                     </div>
 
-                    <!-- Service 6: Legacy Code Modernization & Security Audit -->
-                    <div class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card group">
+                    <!-- Service 6: Full-Stack & Modern Frontend Engineering -->
+                    <div data-service-card data-category="frontend-mobile" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
+                        <div class="absolute -top-3 right-6 px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-blue-500/20 text-blue-300 border border-blue-500/30 font-bold">
+                            Next.js • React • Tailwind
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center text-2xl mb-5">
+                                <i class="fab fa-react"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Full-Stack &amp; Modern Frontend Engineering</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                Building ultra-responsive, SEO-first web applications and interactive SaaS dashboards using Next.js, React, TypeScript, and Tailwind CSS seamlessly wired to Laravel APIs.
+                            </p>
+                            <div class="space-y-2 mb-6 text-xs text-gray-300">
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Next.js App Router, Server Actions, SSR &amp; Incremental Static Regeneration</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Interactive SaaS portals, dynamic data tables, and Tailwind design systems</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Robust client-side state management, real-time WebSocket feeds, &amp; API hydration</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <a href="contact.html?service=Full-Stack+Web+App+(Laravel+++Next.js+/+React)#quote" class="btn-secondary w-full text-center text-xs py-2.5 flex items-center justify-center gap-2 group-hover:bg-blue-600 group-hover:text-white transition-all">
+                                <span>Get Quote for Next.js / React</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 7: Cross-Platform Mobile Apps & Store Publishing -->
+                    <div data-service-card data-category="frontend-mobile" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
+                        <div class="absolute -top-3 right-6 px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-sky-500/20 text-sky-300 border border-sky-500/30 font-bold">
+                            Flutter • iOS &amp; Android • Stores
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-sky-500/10 text-sky-400 flex items-center justify-center text-2xl mb-5">
+                                <i class="fab fa-google-play"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Cross-Platform Mobile Apps &amp; Store Publishing</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                Delivering high-performance iOS and Android mobile apps from a single Flutter &amp; Dart codebase, complete with backend API synchronization and end-to-end Store submission.
+                            </p>
+                            <div class="space-y-2 mb-6 text-xs text-gray-300">
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Clean BLoC / Provider state architecture &amp; offline SQLite/Hive caching</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Push notifications (FCM), native camera/geolocation, &amp; secure biometric auth</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Google Play Console &amp; Apple App Store deployment, TestFlight, &amp; signing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <a href="contact.html?service=Mobile+App+Development+(Flutter+++Store+Publishing)#quote" class="btn-secondary w-full text-center text-xs py-2.5 flex items-center justify-center gap-2 group-hover:bg-sky-600 group-hover:text-white transition-all">
+                                <span>Get Quote for Mobile App &amp; Store</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 8: Technical SEO & Search Performance -->
+                    <div data-service-card data-category="seo-audit" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card relative group">
+                        <div class="absolute -top-3 right-6 px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">
+                            SEO • Schema • Core Web Vitals
+                        </div>
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-2xl mb-5">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Technical SEO &amp; Search Performance</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                Eliminating search engine crawl bottlenecks, ranking higher on Google, and establishing strong Knowledge Graph entity recognition with structured metadata.
+                            </p>
+                            <div class="space-y-2 mb-6 text-xs text-gray-300">
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Advanced Schema.org (JSON-LD) structured data &amp; Google Knowledge Panel sync</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Core Web Vitals optimization (PageSpeed 95+, LCP &amp; CLS fixes, asset compression)</span>
+                                </div>
+                                <div class="flex items-start gap-2">
+                                    <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
+                                    <span>Crawl budget tuning, canonical tags, automated XML sitemaps, &amp; robots.txt</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-white/5">
+                            <a href="contact.html?service=Technical+SEO+&amp;+Performance+Audit#quote" class="btn-secondary w-full text-center text-xs py-2.5 flex items-center justify-center gap-2 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                                <span>Get Quote for Technical SEO</span>
+                                <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 9: Legacy Code Modernization & Security Audit -->
+                    <div data-service-card data-category="seo-audit" class="glass-panel p-6 sm:p-8 flex flex-col justify-between border border-white/10 interactive-card group">
                         <div>
                             <div class="w-12 h-12 rounded-xl bg-red-500/10 text-red-400 flex items-center justify-center text-2xl mb-5">
                                 <i class="fas fa-shield-halved"></i>
@@ -531,7 +655,7 @@
                             <div class="space-y-2 mb-6 text-xs text-gray-300">
                                 <div class="flex items-start gap-2">
                                     <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>
-                                    <span>Version migrations from Laravel 7/8/9 to Laravel 11/12 and PHP 8.3+</span>
+                                    <span>Version migrations from legacy PHP/Laravel to modern Laravel 11/12 and PHP 8.3+</span>
                                 </div>
                                 <div class="flex items-start gap-2">
                                     <i class="fas fa-check-circle text-emerald-400 mt-0.5"></i>

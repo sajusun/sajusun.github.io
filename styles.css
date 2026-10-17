@@ -2,22 +2,6 @@
    SAKHAWAT HOSSAIN - PORTFOLIO DESIGN SYSTEM & STYLES
    Role: Backend Software Engineer (Laravel, PHP, AWS)
    ========================================================================== */
-/* Font Awesome font-display: swap optimization for Core Web Vitals */
-@font-face {
-  font-family: 'Font Awesome 6 Free';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-solid-900.woff2') format('woff2');
-}
-@font-face {
-  font-family: 'Font Awesome 6 Brands';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/webfonts/fa-brands-400.woff2') format('woff2');
-}
-
 /* Fonts are preconnected and loaded asynchronously in HTML <head> for Core Web Vitals optimization */
 :root {
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -63,6 +47,84 @@
   --gradient-brand: linear-gradient(135deg, #4f46e5 0%, #0891b2 100%);
   --shadow-glow: 0 0 20px rgba(79, 70, 229, 0.15);
   --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.06);
+}
+
+/* ==========================================================================
+   WCAG 2.1 AA & AAA ACCESSIBLE CONTRAST RATIO OVERRIDES FOR LIGHT THEME
+   Ensures text contrast is >= 5.0:1 on light backgrounds (#ffffff / #f8fafc)
+   ========================================================================== */
+[data-theme="light"] .text-cyan-400,
+[data-theme="light"] .text-cyan-400\/80 {
+  color: #0e7490 !important; /* cyan-700 (5.36:1 contrast) */
+}
+[data-theme="light"] .hover\:text-cyan-300:hover,
+[data-theme="light"] .hover\:text-cyan-400:hover {
+  color: #155e75 !important;
+}
+[data-theme="light"] .text-emerald-400 {
+  color: #047857 !important; /* emerald-700 (5.48:1 contrast) */
+}
+[data-theme="light"] .hover\:text-emerald-300:hover,
+[data-theme="light"] .hover\:text-emerald-400:hover {
+  color: #065f46 !important;
+}
+[data-theme="light"] .text-amber-400 {
+  color: #b45309 !important; /* amber-700 (5.02:1 contrast) */
+}
+[data-theme="light"] .hover\:text-amber-300:hover,
+[data-theme="light"] .hover\:text-amber-400:hover {
+  color: #92400e !important;
+}
+[data-theme="light"] .text-indigo-400 {
+  color: #4338ca !important; /* indigo-700 (6.29:1 contrast) */
+}
+[data-theme="light"] .hover\:text-indigo-300:hover,
+[data-theme="light"] .hover\:text-indigo-400:hover {
+  color: #3730a3 !important;
+}
+[data-theme="light"] .text-purple-400 {
+  color: #7e22ce !important; /* purple-700 */
+}
+[data-theme="light"] .text-gray-400 {
+  color: #475569 !important; /* slate-600 (6.2:1 contrast) */
+}
+[data-theme="light"] .text-gray-500 {
+  color: #334155 !important; /* slate-700 (8.5:1 contrast) */
+}
+[data-theme="light"] .text-gray-300 {
+  color: #1e293b !important; /* slate-800 (12:1 contrast) */
+}
+[data-theme="light"] .text-white {
+  color: #0f172a !important; /* slate-900 */
+}
+
+/* Light mode badges & tags */
+[data-theme="light"] .bg-indigo-500\/10 {
+  background-color: #e0e7ff !important;
+  color: #3730a3 !important;
+}
+[data-theme="light"] .bg-cyan-500\/10 {
+  background-color: #cffafe !important;
+  color: #155e75 !important;
+}
+[data-theme="light"] .bg-emerald-500\/10 {
+  background-color: #d1fae5 !important;
+  color: #065f46 !important;
+}
+[data-theme="light"] .bg-amber-500\/10 {
+  background-color: #fef3c7 !important;
+  color: #92400e !important;
+}
+[data-theme="light"] .bg-purple-500\/10 {
+  background-color: #f3e8ff !important;
+  color: #6b21a8 !important;
+}
+[data-theme="light"] .bg-white\/\[0\.02\] {
+  background-color: #f1f5f9 !important;
+}
+[data-theme="light"] .border-white\/5,
+[data-theme="light"] .border-white\/10 {
+  border-color: #e2e8f0 !important;
 }
 
 /* Base Elements */

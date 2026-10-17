@@ -4,9 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Theme Management (Dark / Light)
   const themeToggleButtons = document.querySelectorAll('.theme-toggle-btn');
   const storedTheme = localStorage.getItem('sakhawat_theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  const currentTheme = storedTheme || (prefersDark ? 'dark' : 'light');
+  const currentTheme = storedTheme === 'light' ? 'light' : 'dark';
   if (document.documentElement.getAttribute('data-theme') !== currentTheme) {
     document.documentElement.setAttribute('data-theme', currentTheme);
   }
@@ -425,6 +423,22 @@ document.addEventListener('DOMContentLoaded', () => {
           console.warn('[PWA] Service worker registration failed:', err);
         });
     });
+  }
+
+  // 10. High-Performance Font Awesome Loader (Loaded after initial paint to eliminate render blocking & unused CSS)
+  function loadFontAwesome() {
+    if (!document.getElementById('fa-cdn-stylesheet')) {
+      const faLink = document.createElement('link');
+      faLink.id = 'fa-cdn-stylesheet';
+      faLink.rel = 'stylesheet';
+      faLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+      document.head.appendChild(faLink);
+    }
+  }
+  if (document.readyState === 'complete') {
+    loadFontAwesome();
+  } else {
+    window.addEventListener('load', loadFontAwesome);
   }
 });
 

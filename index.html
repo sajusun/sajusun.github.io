@@ -31,8 +31,9 @@
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://sajusun.github.io/" />
 
-    <!-- Preload Critical LCP Hero Image -->
-    <link rel="preload" as="image" href="assets/images/sakhawat-enhanced.jpg" fetchpriority="high" />
+    <!-- Preload Critical LCP Hero Image & Webfonts -->
+    <link rel="preload" as="image" href="assets/images/sakhawat-enhanced.webp" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin />
 
     <!-- Google Fonts Preconnect & High-Performance Non-Blocking Load -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -79,9 +80,6 @@
     <!-- Consolidated Production Stylesheet (Single Render-Blocking CSS) -->
     <link rel="stylesheet" href="styles.min.css" />
 
-    <!-- Optimized Font Awesome Subset (Async Non-Blocking with font-display: swap) -->
-    <link rel="stylesheet" href="fa-subset.min.css" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="fa-subset.min.css" /></noscript>
 
     <!-- JSON-LD Structured Data for Google & Knowledge Graph -->
     <script type="application/ld+json">
@@ -405,13 +403,16 @@
 
                             <!-- Main Circular Avatar -->
                             <div class="hero-avatar-wrapper group">
-                                <img src="assets/images/sakhawat-enhanced.jpg"
-                                    alt="Sakhawat Hossain - Backend Software Engineer"
-                                    class="hero-avatar-img shadow-2xl"
-                                    width="290"
-                                    height="290"
-                                    loading="eager"
-                                    fetchpriority="high" />
+                                <picture>
+                                    <source type="image/webp" srcset="assets/images/sakhawat-enhanced.webp">
+                                    <img src="assets/images/sakhawat-enhanced.jpg"
+                                        alt="Sakhawat Hossain - Backend Software Engineer"
+                                        class="hero-avatar-img shadow-2xl"
+                                        width="389"
+                                        height="389"
+                                        loading="eager"
+                                        fetchpriority="high" />
+                                </picture>
                             </div>
 
                             <!-- Floating Badge 3: Latency Metric -->

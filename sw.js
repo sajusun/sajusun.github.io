@@ -1,5 +1,5 @@
 // SAKHAWAT HOSSAIN PORTFOLIO - SERVICE WORKER (PWA & OFFLINE CACHING)
-const CACHE_NAME = 'sakhawat-portfolio-v1.4';
+const CACHE_NAME = 'sakhawat-portfolio-v1.5';
 
 const PRECACHE_ASSETS = [
   './',
@@ -11,8 +11,8 @@ const PRECACHE_ASSETS = [
   './contact.html',
   './404.html',
   './styles.min.css',
-  './fa-subset.min.css',
-  './styles.css',
+  './assets/webfonts/fa-solid-900.woff2',
+  './assets/webfonts/fa-brands-400.woff2',
   './script.js',
   './manifest.json',
   './assets/images/favicon.svg',
@@ -21,6 +21,7 @@ const PRECACHE_ASSETS = [
   './assets/images/icon-192.png',
   './assets/images/icon-512.png',
   './assets/images/og-preview.png',
+  './assets/images/sakhawat-enhanced.webp',
   './assets/images/sakhawat-enhanced.jpg',
   './assets/images/sakhawat-hossain-as-saju-sun.jpg'
 ];

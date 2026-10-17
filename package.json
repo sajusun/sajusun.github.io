@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Portfolio of Sakhawat Hossain - Backend Software Engineer",
   "scripts": {
-    "build:css": "npx -y tailwindcss@3.4.17 -i tailwind-input.css -o tailwind.min.css --minify && node -e \"const fs=require('fs'); fs.writeFileSync('styles.min.css', fs.readFileSync('tailwind.min.css') + '\\n' + fs.readFileSync('styles.css'));\""
+    "build:css": "npx -y tailwindcss@3.4.17 -i tailwind-input.css -o tailwind.min.css --minify && node scripts/patch-css.js"
   },
   "devDependencies": {
+    "sharp": "^0.35.5",
     "tailwindcss": "^3.4.17"
   }
 }

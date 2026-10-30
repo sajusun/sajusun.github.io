@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://sajusun.github.io/sitemap.xml
+Sitemap: https://sajusun.github.io/extensions/sitemap.xml

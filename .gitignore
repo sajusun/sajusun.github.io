@@ -8,7 +8,6 @@ ehthumbs.db
 Thumbs.db
 
 # Editor directories and files
-.vscode/
 .idea/
 *.swp
 *.swo
@@ -47,8 +46,6 @@ jspm_packages/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
-.env.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -67,3 +64,4 @@ build/
 # User uploaded assets (if you want to track them, remove these)
 assets/user-images/
 assets/uploads/
+config.bat

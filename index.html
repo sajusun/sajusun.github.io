@@ -7,12 +7,12 @@
 
     <!-- Prevent Theme Flash (FOUC) -->
     <script>
-        (function() {
+        (function () {
             try {
                 const storedTheme = localStorage.getItem('sakhawat_theme');
                 const theme = storedTheme === 'light' ? 'light' : 'dark';
                 document.documentElement.setAttribute('data-theme', theme);
-            } catch (e) {}
+            } catch (e) { }
         })();
     </script>
     <title>
@@ -38,8 +38,13 @@
     <!-- Google Fonts Preconnect & High-Performance Non-Blocking Load -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" media="print" onload="this.media='all'" />
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" /></noscript>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+        media="print" onload="this.media='all'" />
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" />
+    </noscript>
 
     <!-- Favicon & Search Engine Identity -->
     <link rel="icon" href="favicon.ico" sizes="48x48" />
@@ -218,7 +223,8 @@
 
             <!-- Actions -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="contact.html?tab=quote#quote" class="btn-primary text-sm py-2 px-4 !bg-emerald-600 hover:!bg-emerald-700">
+                <a href="contact.html?tab=quote#quote"
+                    class="btn-primary text-sm py-2 px-4 !bg-emerald-600 hover:!bg-emerald-700">
                     <i class="fas fa-file-invoice-dollar mr-1"></i> Request Quote
                 </a>
                 <button
@@ -245,10 +251,9 @@
 
         <!-- Mobile dropdown -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 px-4 pt-3 pb-5 space-y-1">
-            <a href="./" class="mobile-nav-link active"><i
-                    class="fas fa-home w-5 text-center text-indigo-400"></i> Home</a>
-            <a href="services.html" class="mobile-nav-link"><i
-                    class="fas fa-cogs w-5 text-center text-emerald-400"></i>
+            <a href="./" class="mobile-nav-link active"><i class="fas fa-home w-5 text-center text-indigo-400"></i>
+                Home</a>
+            <a href="services.html" class="mobile-nav-link"><i class="fas fa-cogs w-5 text-center text-emerald-400"></i>
                 Services &amp; Solutions</a>
             <a href="projects.html" class="mobile-nav-link"><i
                     class="fas fa-layer-group w-5 text-center text-indigo-400"></i>
@@ -286,7 +291,8 @@
                         </div>
 
                         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                            <span class="block text-xl sm:text-2xl font-bold text-indigo-400 mb-2 font-mono">Sakhawat Hossain (sajusun)</span>
+                            <span class="block text-xl sm:text-2xl font-bold text-indigo-400 mb-2 font-mono">Sakhawat
+                                Hossain (sajusun)</span>
                             Architecting
                             <span class="text-gradient">High-Scale Backend Systems</span>
                             &amp; Cloud Infrastructure.
@@ -392,7 +398,8 @@
 
                             <!-- Floating Badge 2: SEO & Core Web Vitals -->
                             <div class="floating-badge floating-badge-2">
-                                <div class="w-7 h-7 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                                <div
+                                    class="w-7 h-7 rounded-full bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
                                     <i class="fas fa-bolt-lightning text-xs"></i>
                                 </div>
                                 <div>
@@ -407,17 +414,15 @@
                                     <source type="image/webp" srcset="assets/images/sakhawat-enhanced.webp">
                                     <img src="assets/images/sakhawat-enhanced.jpg"
                                         alt="Sakhawat Hossain - Backend Software Engineer"
-                                        class="hero-avatar-img shadow-2xl"
-                                        width="389"
-                                        height="389"
-                                        loading="eager"
+                                        class="hero-avatar-img shadow-2xl" width="389" height="389" loading="eager"
                                         fetchpriority="high" />
                                 </picture>
                             </div>
 
                             <!-- Floating Badge 3: Latency Metric -->
                             <div class="floating-badge floating-badge-3">
-                                <div class="w-7 h-7 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                                <div
+                                    class="w-7 h-7 rounded-full bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
                                     <i class="fas fa-gauge-high text-xs"></i>
                                 </div>
                                 <div>
@@ -428,7 +433,8 @@
 
                             <!-- Floating Badge 4: Production Ready -->
                             <div class="floating-badge floating-badge-4">
-                                <div class="w-7 h-7 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
+                                <div
+                                    class="w-7 h-7 rounded-full bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400">
                                     <i class="fas fa-shield-halved text-xs"></i>
                                 </div>
                                 <div>
@@ -611,901 +617,951 @@
                     </div>
                 </div>
             </div>
-        <!-- Services & Solutions Overview Section -->
-        <section class="py-16 bg-gradient-to-b from-transparent to-black/30">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-                    <div>
-                        <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">
-                            Engineering Offerings
-                        </span>
-                        <h2 class="text-3xl font-bold tracking-tight text-white">
-                            Services &amp; Architecture Consulting
-                        </h2>
-                        <p class="text-gray-400 text-sm mt-1">
-                            Direct senior technical leadership and execution for high-growth startups, scale-ups, and agencies.
-                        </p>
+            <!-- Services & Solutions Overview Section -->
+            <section class="py-16 bg-gradient-to-b from-transparent to-black/30">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+                        <div>
+                            <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 mb-2 block">
+                                Engineering Offerings
+                            </span>
+                            <h2 class="text-3xl font-bold tracking-tight text-white">
+                                Services &amp; Architecture Consulting
+                            </h2>
+                            <p class="text-gray-400 text-sm mt-1">
+                                Direct senior technical leadership and execution for high-growth startups, scale-ups,
+                                and agencies.
+                            </p>
+                        </div>
+                        <a href="services.html"
+                            class="text-emerald-400 hover:text-emerald-300 font-semibold text-sm flex items-center gap-1 group">
+                            Explore All 9 Services &amp; Engagement Models
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                        </a>
                     </div>
-                    <a href="services.html" class="text-emerald-400 hover:text-emerald-300 font-semibold text-sm flex items-center gap-1 group">
-                        Explore All 9 Services &amp; Engagement Models
-                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </a>
+
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Service 1 -->
+                        <div
+                            class="glass-panel p-6 border border-white/10 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-3">
+                                    <i class="fas fa-cubes"></i>
+                                </div>
+                                <h3 class="font-bold text-white text-base mb-1.5">Modular Laravel &amp; SaaS</h3>
+                                <p class="text-gray-300 text-xs leading-relaxed mb-4">
+                                    Domain-driven modular monoliths, multi-tenant databases, and resilient
+                                    RESTful/Webhook APIs designed to scale without spaghetti code.
+                                </p>
+                            </div>
+                            <a href="services.html#services-list"
+                                aria-label="Explore Modular Laravel &amp; SaaS Architecture Services"
+                                class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                Explore Service Details <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service 2 -->
+                        <div
+                            class="glass-panel p-6 border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-3">
+                                    <i class="fab fa-aws"></i>
+                                </div>
+                                <h3 class="font-bold text-white text-base mb-1.5">AWS Cloud &amp; CI/CD DevOps</h3>
+                                <p class="text-gray-300 text-xs leading-relaxed mb-4">
+                                    EC2, Aurora RDS, ALB load balancers, S3 storage, and secretless zero-downtime
+                                    deployments via GitHub Actions &amp; AWS OIDC.
+                                </p>
+                            </div>
+                            <a href="services.html#services-list"
+                                aria-label="Explore AWS Cloud &amp; CI/CD DevOps Services"
+                                class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+                                Explore Service Details <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+
+                        <!-- Service 3 -->
+                        <div
+                            class="glass-panel p-6 border border-white/10 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
+                            <div>
+                                <div
+                                    class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-3">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3 class="font-bold text-white text-base mb-1.5">Database Performance Tuning</h3>
+                                <p class="text-gray-300 text-xs leading-relaxed mb-4">
+                                    Slashing p95 latency to &lt;35ms with composite indexing, EXPLAIN ANALYZE profiling,
+                                    N+1 query elimination, and Redis caching.
+                                </p>
+                            </div>
+                            <a href="services.html#services-list"
+                                aria-label="Explore Database Performance Tuning Services"
+                                class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
+                                Explore Service Details <i class="fas fa-arrow-right text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Service 1 -->
-                    <div class="glass-panel p-6 border border-white/10 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+            <!-- Featured Projects Showcase -->
+            <section class="py-20">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                         <div>
-                            <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl mb-3">
-                                <i class="fas fa-cubes"></i>
-                            </div>
-                            <h3 class="font-bold text-white text-base mb-1.5">Modular Laravel &amp; SaaS</h3>
-                            <p class="text-gray-300 text-xs leading-relaxed mb-4">
-                                Domain-driven modular monoliths, multi-tenant databases, and resilient RESTful/Webhook APIs designed to scale without spaghetti code.
+                            <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2 block">
+                                Portfolio Showcase
+                            </span>
+                            <h2 class="text-3xl font-bold tracking-tight">
+                                Featured Production Projects &amp; Architectures
+                            </h2>
+                            <p class="text-gray-400 text-sm mt-1">
+                                Real-world applications engineered for international clients and
+                                high user throughput.
                             </p>
                         </div>
-                        <a href="services.html#services-list" aria-label="Explore Modular Laravel &amp; SaaS Architecture Services" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-                            Explore Service Details <i class="fas fa-arrow-right text-[10px]"></i>
+                        <a href="projects.html"
+                            class="text-indigo-400 hover:text-indigo-300 font-semibold text-sm flex items-center gap-1 group">
+                            View All Projects & Architecture Breakdowns
+                            <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                         </a>
                     </div>
 
-                    <!-- Service 2 -->
-                    <div class="glass-panel p-6 border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="w-10 h-10 rounded-lg bg-cyan-500/10 text-cyan-400 flex items-center justify-center text-xl mb-3">
-                                <i class="fab fa-aws"></i>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Project 1: MyBergo -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-emerald">
+                                        <i class="fas fa-circle text-emerald-400 text-[8px]"></i>
+                                        Production Live
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Hotel Management &amp; Booking
+                                        SaaS</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    MyBergo — Multi-Vendor Property Booking Platform
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Architected an enterprise multi-tenant booking ecosystem operating across 3
+                                    dedicated portals on AWS EC2 &amp; ALB with Amazon Aurora RDS cluster. Features
+                                    pessimistic row locking eliminating double-booking race conditions, direct-to-S3
+                                    presigned uploads, and passwordless GitHub Actions SSM OIDC deployments.
+                                </p>
+                                <!-- Quantitative Metrics Grid -->
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span
+                                            class="text-xs font-bold font-mono text-emerald-400 block">&lt;180ms</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">p95 Latency</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-indigo-400 block">100%</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Race-Free</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-cyan-400 block">-78%</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">WebP Size</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-amber-400 block">0-Secret</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">OIDC CI/CD</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge">Laravel 12</span>
+                                    <span class="tech-badge">PHP 8.4</span>
+                                    <span class="tech-badge">Amazon Aurora RDS</span>
+                                    <span class="tech-badge">AWS S3 Presigned</span>
+                                    <span class="tech-badge">AWS SSM OIDC</span>
+                                    <span class="tech-badge">Laravel Reverb</span>
+                                    <span class="tech-badge">Amazon SES</span>
+                                    <span class="tech-badge">Stripe Cashier</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-white text-base mb-1.5">AWS Cloud &amp; CI/CD DevOps</h3>
-                            <p class="text-gray-300 text-xs leading-relaxed mb-4">
-                                EC2, Aurora RDS, ALB load balancers, S3 storage, and secretless zero-downtime deployments via GitHub Actions &amp; AWS OIDC.
-                            </p>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://mybergo.com" target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+                                    <i class="fas fa-external-link-alt"></i> Visit Live:
+                                    mybergo.com
+                                </a>
+                                <a href="projects.html#mybergo"
+                                    class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                    <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
+                                </a>
+                            </div>
                         </div>
-                        <a href="services.html#services-list" aria-label="Explore AWS Cloud &amp; CI/CD DevOps Services" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
-                            Explore Service Details <i class="fas fa-arrow-right text-[10px]"></i>
-                        </a>
-                    </div>
 
-                    <!-- Service 3 -->
-                    <div class="glass-panel p-6 border border-white/10 hover:border-emerald-500/50 transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl mb-3">
-                                <i class="fas fa-database"></i>
+                        <!-- Project: OmniCore -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-indigo">
+                                        <i class="fas fa-cubes text-indigo-400 text-[10px]"></i>
+                                        Enterprise Open Source
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Modular Monolith &bull; PHP 8.4</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    OmniCore — Modular Monolith & Concurrency-Safe E-Commerce Engine
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Engineered an enterprise Modular Monolith backend on Laravel 12 &amp; PHP 8.4
+                                    utilizing Domain-Driven Design (DDD). Features atomic checkout with row-level
+                                    pessimistic locking (<code
+                                        class="text-indigo-300 font-mono text-xs">lockForUpdate()</code>), Cartesian
+                                    product variant generator, payment strategy pattern, real-time Reverb WebSockets,
+                                    and Scribe OpenAPI 3.0 documentation.
+                                </p>
+                                <!-- Quantitative Metrics Grid -->
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-cyan-400 block">35ms</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Catalog Query</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-emerald-400 block">0 Errors</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">PHPStan L5</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-indigo-400 block">100%</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Idempotent</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-amber-400 block">&lt;50ms</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Reverb Sync</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge">Laravel 12</span>
+                                    <span class="tech-badge">PHP 8.4</span>
+                                    <span class="tech-badge">Modular Monolith</span>
+                                    <span class="tech-badge">PHPStan L5 (0 Errors)</span>
+                                    <span class="tech-badge">Laravel Reverb</span>
+                                    <span class="tech-badge">WebRTC</span>
+                                    <span class="tech-badge">Payment Strategy</span>
+                                    <span class="tech-badge">OpenAPI / Scribe</span>
+                                </div>
                             </div>
-                            <h3 class="font-bold text-white text-base mb-1.5">Database Performance Tuning</h3>
-                            <p class="text-gray-300 text-xs leading-relaxed mb-4">
-                                Slashing p95 latency to &lt;35ms with composite indexing, EXPLAIN ANALYZE profiling, N+1 query elimination, and Redis caching.
-                            </p>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://github.com/sajusun/OmniCore" target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                                    <i class="fab fa-github"></i> GitHub: sajusun/OmniCore
+                                </a>
+                                <a href="projects.html#omnicore"
+                                    class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                    <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
+                                </a>
+                            </div>
                         </div>
-                        <a href="services.html#services-list" aria-label="Explore Database Performance Tuning Services" class="text-xs font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1">
-                            Explore Service Details <i class="fas fa-arrow-right text-[10px]"></i>
-                        </a>
+
+                        <!-- Project 2: Auction Retriever -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-amber">
+                                        <i class="fas fa-circle text-amber-400 text-[8px]"></i> USA Production Live
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Scraping &amp; Real Estate SaaS</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    Auction Retriever — Property Auction Scraping Engine
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Architected the automated multi-source scraping engine and GraphQL backend
+                                    aggregating thousands of real estate and land auction deals across the US. Features
+                                    error-isolated DomCrawler queue pipelines, Lighthouse GraphQL search, Stripe Cashier
+                                    subscriptions, and weekly investor digests.
+                                </p>
+                                <!-- Quantitative Metrics Grid -->
+                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-amber-400 block">50,000+</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Listings/Day</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-emerald-400 block">99.8%</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Pipe Uptime</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-cyan-400 block">&lt;120ms</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Search Speed</span>
+                                    </div>
+                                    <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
+                                        <span class="text-xs font-bold font-mono text-indigo-400 block">50 States</span>
+                                        <span class="text-[10px] text-gray-400 uppercase font-mono">Coverage</span>
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-amber">Laravel 11</span>
+                                    <span class="tech-badge tech-badge-amber">DomCrawler</span>
+                                    <span class="tech-badge tech-badge-amber">GraphQL</span>
+                                    <span class="tech-badge tech-badge-amber">Stripe Cashier</span>
+                                    <span class="tech-badge tech-badge-amber">Reverb</span>
+                                    <span class="tech-badge tech-badge-amber">AWS S3</span>
+                                    <span class="tech-badge tech-badge-amber">Laravel Modules</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://auctionretriever.com" target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
+                                    <i class="fas fa-external-link-alt"></i> Visit Live:
+                                    auctionretriever.com
+                                </a>
+                                <a href="projects.html#auctionretriever"
+                                    class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1">
+                                    <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: CruzeHub -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-cyan">
+                                        <i class="fas fa-clock text-cyan-400 text-[8px]"></i> Mobile
+                                        App • Private Staging
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Automotive Community &amp;
+                                        Parts</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    CruzeHub — Automotive Marketplace &amp; Admin Suite
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Engineered the enterprise backend APIs, administration
+                                    dashboard, and real-time community engine for an Australian
+                                    automotive enthusiast mobile app (in private client staging).
+                                    Features vehicle compatibility matching algorithms (connecting
+                                    specific car models with compatible aftermarket parts) and
+                                    real-time live socket chat.
+                                </p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-cyan-400"></i> Complex vehicle
+                                        parts compatibility relational database schema
+                                    </div>
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-cyan-400"></i> Real-time
+                                        WebSocket notifications &amp; event broadcast pipelines
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-cyan">Laravel</span>
+                                    <span class="tech-badge tech-badge-cyan">RESTful API</span>
+                                    <span class="tech-badge tech-badge-cyan">Laravel Echo</span>
+                                    <span class="tech-badge tech-badge-cyan">WebSockets</span>
+                                    <span class="tech-badge tech-badge-cyan">MySQL</span>
+                                    <span class="tech-badge tech-badge-cyan">RBAC Admin</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <span class="text-xs sm:text-sm font-medium text-cyan-400/80 flex items-center gap-1.5">
+                                    <i class="fas fa-mobile-alt"></i> Mobile App (Private Staging)
+                                </span>
+                                <a href="projects.html#cruzehub" class="text-xs text-gray-400 hover:text-white">
+                                    Architecture Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: EHListings (Twin Cities Week) -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-emerald">
+                                        <i class="fas fa-circle text-emerald-400 text-[8px]"></i>
+                                        USA Live Web
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Events & Listings Platform</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    EHListings — Local Events, City Guide & Community Directory
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Engineered the complete scalable Laravel backend for a live US
+                                    local city listings & events hub. Built with GraphQL APIs
+                                    (Lighthouse), real-time WebSockets (Laravel Reverb), automated
+                                    Stripe payments, Twilio SMS verification, and Firebase Cloud
+                                    Messaging (FCM).
+                                </p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-emerald-400"></i> High-speed
+                                        GraphQL API & Livewire dynamic interactive feeds
+                                    </div>
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-emerald-400"></i> AWS S3 media
+                                        pipeline, Redis caching & automated PDF invoicing
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-emerald">Laravel 11</span>
+                                    <span class="tech-badge tech-badge-emerald">GraphQL</span>
+                                    <span class="tech-badge tech-badge-emerald">Reverb / WebSockets</span>
+                                    <span class="tech-badge tech-badge-emerald">Stripe</span>
+                                    <span class="tech-badge tech-badge-emerald">Firebase</span>
+                                    <span class="tech-badge tech-badge-emerald">AWS S3</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://ehlistings.com" target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+                                    <i class="fas fa-external-link-alt"></i> Visit Live:
+                                    ehlistings.com
+                                </a>
+                                <a href="projects.html#ehlistings" class="text-xs text-gray-400 hover:text-white">
+                                    Architecture Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: OscarU Mobile App Backend -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-cyan">
+                                        <i class="fab fa-google-play text-cyan-400 text-xs"></i>
+                                        Google Play Store
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Mobile API & Merchant Suite</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    OscarU (Motive) — Lifestyle & Events Discovery Mobile Engine
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Architected the complete high-throughput RESTful API backend
+                                    and Super Admin CMS powering the official OscarU mobile
+                                    application on Google Play Store. Features merchant analytics
+                                    portals, event ticket bookings, personalized user discovery
+                                    feeds, and Firebase push notifications.
+                                </p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-cyan-400"></i> JWT Multi-Guard
+                                        Auth (Users, Merchants & Admins) + Apple Login
+                                    </div>
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-cyan-400"></i> RevenueCat In-App
+                                        Purchase Webhooks & Merchant Revenue Dashboards
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-cyan">Laravel 11</span>
+                                    <span class="tech-badge tech-badge-cyan">Mobile REST API</span>
+                                    <span class="tech-badge tech-badge-cyan">JWT Auth</span>
+                                    <span class="tech-badge tech-badge-cyan">Firebase FCM</span>
+                                    <span class="tech-badge tech-badge-cyan">RevenueCat</span>
+                                    <span class="tech-badge tech-badge-cyan">MySQL</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://play.google.com/store/apps/details?id=com.oscaru.motive"
+                                    target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                                    <i class="fab fa-google-play"></i> Play Store: OscarU Motive
+                                </a>
+                                <a href="projects.html#oscaru" class="text-xs text-gray-400 hover:text-white">
+                                    Architecture Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 5: Fest-Quest (Apple App Store) -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-indigo">
+                                        <i class="fab fa-apple text-white text-xs"></i> Apple App
+                                        Store Live
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">iOS Music & Memory App</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    Fest-Quest — Music Festival Memory Book & Super Admin Suite
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Engineered the complete scalable Laravel 11 RESTful API
+                                    backend and Super Admin dashboard for Fest-Quest on the Apple
+                                    App Store. Features festival performance rating engines, media
+                                    vaults, real-time socket chat, Apple Sign-in with JWT auth,
+                                    and Firebase FCM push notifications.
+                                </p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-indigo-400"></i> Full Super
+                                        Admin Dashboard & Operations (Livewire, DataTables & RBAC)
+                                    </div>
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-indigo-400"></i> High-resolution
+                                        photo/video albums, Intervention Image & AWS S3
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-indigo">Laravel 11</span>
+                                    <span class="tech-badge tech-badge-indigo">Apple Store</span>
+                                    <span class="tech-badge tech-badge-indigo">Mobile API</span>
+                                    <span class="tech-badge tech-badge-indigo">JWT Multi-Guard</span>
+                                    <span class="tech-badge tech-badge-indigo">Firebase FCM</span>
+                                    <span class="tech-badge tech-badge-indigo">MySQL</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://apps.apple.com/au/app/fest-quest/id6771652854" target="_blank"
+                                    rel="noopener"
+                                    class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
+                                    <i class="fab fa-apple"></i> App Store: Fest-Quest
+                                </a>
+                                <a href="projects.html#fest-quest" class="text-xs text-gray-400 hover:text-white">
+                                    Architecture Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Caragon (Fashion E-Commerce) -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-emerald">
+                                        <i class="fas fa-circle text-emerald-400 text-[8px]"></i>
+                                        Production Live
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Next.js & Laravel E-Commerce</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    Caragon — Modern Apparel & Fashion Platform
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Engineered the complete headless Laravel 11 RESTful API
+                                    backend and integrated Next.js e-commerce storefront. Features
+                                    dynamic nested product variants, seasonal drops,
+                                    multi-location courier & tax calculation engine, and Stripe
+                                    Checkout sessions.
+                                </p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-emerald-400"></i>
+                                        Multi-attribute variant schema (Size, Color, Season Revival
+                                        Drops)
+                                    </div>
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-emerald-400"></i> Location-aware
+                                        shipping fees, dynamic taxes & Stripe webhook handlers
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-emerald">Next.js</span>
+                                    <span class="tech-badge tech-badge-emerald">Laravel</span>
+                                    <span class="tech-badge tech-badge-emerald">Stripe Checkout</span>
+                                    <span class="tech-badge tech-badge-emerald">JWT Auth</span>
+                                    <span class="tech-badge tech-badge-emerald">MySQL</span>
+                                    <span class="tech-badge tech-badge-emerald">Headless CMS</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://caragoan.vercel.app" target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
+                                    <i class="fas fa-external-link-alt"></i> Visit Live:
+                                    caragoan.vercel.app
+                                </a>
+                                <a href="projects.html#caragon" class="text-xs text-gray-400 hover:text-white">
+                                    Architecture Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: Organ Sciences -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-purple">
+                                        <i class="fas fa-circle text-purple-400 text-[8px]"></i>
+                                        Live D2C Platform
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Next.js &amp; Laravel</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    Organ Sciences — D2C Supplement Subscription Portal
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Developed a high-converting recurring subscription e-commerce
+                                    portal with Next.js & Laravel. Implemented automated recurring
+                                    billing cycles, subscriber customer self-service portals, and
+                                    robust Stripe subscription webhook listeners with automated
+                                    retries.
+                                </p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-purple-400"></i> Stripe webhook
+                                        idempotency & automated dunning/retry logic
+                                    </div>
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-purple-400"></i> Seamless
+                                        Next.js SSR frontend + Headless Laravel API backend
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-purple">Next.js</span>
+                                    <span class="tech-badge tech-badge-purple">Laravel</span>
+                                    <span class="tech-badge tech-badge-purple">Stripe API</span>
+                                    <span class="tech-badge tech-badge-purple">Webhooks</span>
+                                    <span class="tech-badge tech-badge-purple">TypeScript</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://organ-sciences.vercel.app" target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1.5">
+                                    <i class="fas fa-external-link-alt"></i> Visit Live:
+                                    organ-sciences.vercel.app
+                                </a>
+                                <a href="projects.html#organ-sciences" class="text-xs text-gray-400 hover:text-white">
+                                    Architecture Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Project 8: CodeStudio Pro -->
+                        <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
+                            <div class="p-6 border-b border-white/10 flex-grow">
+                                <div class="flex items-center justify-between mb-3">
+                                    <span class="tech-badge tech-badge-cyan">
+                                        <i class="fas fa-circle text-cyan-400 text-[8px]"></i>
+                                        Production Live
+                                    </span>
+                                    <span class="text-xs font-mono text-gray-400">Next.js &bull; Headless API</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-2">
+                                    CodeStudio Pro — Agency Platform & Real-Time Workspace
+                                </h3>
+                                <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                                    Full-stack software agency hub and client tracking workspace.
+                                    Engineered with Next.js (App Router, Server Components
+                                    &amp; ISR), React, TypeScript, and Tailwind CSS,
+                                    connected to a high-speed headless Laravel microservice
+                                    backend with Laravel Reverb WebSockets for instant
+                                    notification toasts, dynamic 5-palette theme switching, and
+                                    interactive quote estimation.
+                                </p>
+                                <div class="space-y-2 mb-4">
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-cyan-400"></i> Next.js ISR +
+                                        dynamic product sandboxes &amp; interactive quote estimator
+                                    </div>
+                                    <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
+                                        <i class="fas fa-check text-cyan-400"></i> Laravel Reverb
+                                        WebSocket broadcasts &amp; 5-palette CSS variable theme
+                                        engine
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1.5 pt-2">
+                                    <span class="tech-badge tech-badge-cyan">Next.js</span>
+                                    <span class="tech-badge tech-badge-cyan">React.js</span>
+                                    <span class="tech-badge tech-badge-cyan">TypeScript</span>
+                                    <span class="tech-badge tech-badge-cyan">Tailwind CSS</span>
+                                    <span class="tech-badge tech-badge-cyan">Laravel Reverb</span>
+                                    <span class="tech-badge tech-badge-cyan">Microservices</span>
+                                </div>
+                            </div>
+                            <div
+                                class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
+                                <a href="https://code-studio-pro.vercel.app" target="_blank" rel="noopener"
+                                    class="text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
+                                    <i class="fas fa-external-link-alt"></i> Visit Live:
+                                    code-studio-pro.vercel.app
+                                </a>
+                                <a href="projects.html#code-studio" class="text-xs text-gray-400 hover:text-white">
+                                    Case Study &rarr;
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Featured Projects Showcase -->
-        <section class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-                    <div>
+            <!-- Professional Experience Timeline -->
+            <section class="py-16 bg-black/20 border-t border-white/5">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
                         <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2 block">
-                            Portfolio Showcase
+                            Career Journey
                         </span>
-                        <h2 class="text-3xl font-bold tracking-tight">
-                            Featured Production Projects &amp; Architectures
-                        </h2>
-                        <p class="text-gray-400 text-sm mt-1">
-                            Real-world applications engineered for international clients and
-                            high user throughput.
-                        </p>
-                    </div>
-                    <a href="projects.html"
-                        class="text-indigo-400 hover:text-indigo-300 font-semibold text-sm flex items-center gap-1 group">
-                        View All Projects & Architecture Breakdowns
-                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Project 1: MyBergo -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-emerald">
-                                    <i class="fas fa-circle text-emerald-400 text-[8px]"></i>
-                                    Production Live
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Hotel Management &amp; Booking SaaS</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                MyBergo — Multi-Vendor Property Booking Platform
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Architected an enterprise multi-tenant booking ecosystem operating across 3 dedicated portals on AWS EC2 &amp; ALB with Amazon Aurora RDS cluster. Features pessimistic row locking eliminating double-booking race conditions, direct-to-S3 presigned uploads, and passwordless GitHub Actions SSM OIDC deployments.
-                            </p>
-                            <!-- Quantitative Metrics Grid -->
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-emerald-400 block">&lt;180ms</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">p95 Latency</span>
-                                </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-indigo-400 block">100%</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Race-Free</span>
-                                </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-cyan-400 block">-78%</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">WebP Size</span>
-                                </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-amber-400 block">0-Secret</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">OIDC CI/CD</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge">Laravel 12</span>
-                                <span class="tech-badge">PHP 8.4</span>
-                                <span class="tech-badge">Amazon Aurora RDS</span>
-                                <span class="tech-badge">AWS S3 Presigned</span>
-                                <span class="tech-badge">AWS SSM OIDC</span>
-                                <span class="tech-badge">Laravel Reverb</span>
-                                <span class="tech-badge">Amazon SES</span>
-                                <span class="tech-badge">Stripe Cashier</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://mybergo.com" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live:
-                                mybergo.com
-                            </a>
-                            <a href="projects.html#mybergo" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-                                <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
-                            </a>
-                        </div>
+                        <h2 class="text-3xl font-bold tracking-tight">Professional Engineering Experience</h2>
                     </div>
 
-                    <!-- Project: OmniCore -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-indigo">
-                                    <i class="fas fa-cubes text-indigo-400 text-[10px]"></i>
-                                    Enterprise Open Source
+                    <div class="space-y-8">
+                        <!-- Softvence IT Ltd -->
+                        <div class="glass-panel p-6 sm:p-8 relative timeline-item">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">
+                                        Laravel / Backend Developer
+                                    </h3>
+                                    <p class="text-indigo-400 font-medium">
+                                        Softvence IT Ltd
+                                        <span class="text-gray-400 text-xs font-normal">| Mohakhali, Dhaka, BD</span>
+                                    </p>
+                                </div>
+                                <span
+                                    class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 w-fit">
+                                    Dec 2025 - Nov 2026
                                 </span>
-                                <span class="text-xs font-mono text-gray-400">Modular Monolith &bull; PHP 8.4</span>
                             </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                OmniCore — Modular Monolith & Concurrency-Safe E-Commerce Engine
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Engineered an enterprise Modular Monolith backend on Laravel 12 &amp; PHP 8.4 utilizing Domain-Driven Design (DDD). Features atomic checkout with row-level pessimistic locking (<code class="text-indigo-300 font-mono text-xs">lockForUpdate()</code>), Cartesian product variant generator, payment strategy pattern, real-time Reverb WebSockets, and Scribe OpenAPI 3.0 documentation.
-                            </p>
-                            <!-- Quantitative Metrics Grid -->
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-cyan-400 block">35ms</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Catalog Query</span>
-                                </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-emerald-400 block">0 Errors</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">PHPStan L5</span>
-                                </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-indigo-400 block">100%</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Idempotent</span>
-                                </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-amber-400 block">&lt;50ms</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Reverb Sync</span>
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge">Laravel 12</span>
-                                <span class="tech-badge">PHP 8.4</span>
-                                <span class="tech-badge">Modular Monolith</span>
-                                <span class="tech-badge">PHPStan L5 (0 Errors)</span>
-                                <span class="tech-badge">Laravel Reverb</span>
-                                <span class="tech-badge">WebRTC</span>
-                                <span class="tech-badge">Payment Strategy</span>
-                                <span class="tech-badge">OpenAPI / Scribe</span>
-                            </div>
+                            <ul class="text-gray-300 text-sm space-y-2.5">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
+                                    <span>Design and develop scalable Laravel backend systems using
+                                        modular, service-based architecture, robust RESTful APIs,
+                                        and reusable business logic.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
+                                    <span>Develop production-ready web applications, administrative
+                                        dashboards, CRM workflows, and multi-vendor business modules
+                                        for international clients.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
+                                    <span>Design and optimize database schemas, relationships,
+                                        indexes, and complex Eloquent/SQL queries, improving backend
+                                        processing performance by <strong>30%</strong>.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
+                                    <span>Integrate third-party services, payment gateways, and
+                                        webhook-based workflows with reliable error handling and
+                                        retry mechanisms.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
+                                    <span>Deploy and maintain production applications on AWS
+                                        infrastructure, working with EC2, S3, Aurora RDS, SES, SSM,
+                                        OIDC, and Application Load Balancer.</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://github.com/sajusun/OmniCore" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
-                                <i class="fab fa-github"></i> GitHub: sajusun/OmniCore
-                            </a>
-                            <a href="projects.html#omnicore" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-                                <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
-                            </a>
+
+                        <!-- Edison Industries Ltd -->
+                        <div class="glass-panel p-6 sm:p-8 relative timeline-item">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">
+                                        Jr. Technical Assistant / Software Operations
+                                    </h3>
+                                    <p class="text-cyan-400 font-medium">
+                                        Edison Industries Ltd
+                                        <span class="text-gray-400 text-xs font-normal">| Savar, Dhaka, BD</span>
+                                    </p>
+                                </div>
+                                <span
+                                    class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 w-fit">
+                                    Jan 2024 - Nov 2025
+                                </span>
+                            </div>
+                            <ul class="text-gray-300 text-sm space-y-2.5">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-cyan-400 text-xs mt-1"></i>
+                                    <span>Provided technical troubleshooting and hardware-software
+                                        system integration for production and engineering
+                                        lines.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-cyan-400 text-xs mt-1"></i>
+                                    <span>Developed automated diagnostic scripts and data logging
+                                        routines to streamline equipment testing workflows.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-cyan-400 text-xs mt-1"></i>
+                                    <span>Collaborated with cross-functional engineering teams to
+                                        diagnose system bottlenecks and improve operational
+                                        turnaround time by <strong>20%</strong>.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Kodeeo Ltd -->
+                        <div class="glass-panel p-6 sm:p-8 relative timeline-item">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-white">
+                                        App Developer (Intern / Trainee)
+                                    </h3>
+                                    <p class="text-purple-400 font-medium">
+                                        Kodeeo Ltd
+                                        <span class="text-gray-400 text-xs font-normal">| Uttara, Dhaka, BD</span>
+                                    </p>
+                                </div>
+                                <span
+                                    class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-purple-500/10 text-purple-300 border border-purple-500/20 w-fit">
+                                    Sept 2023 - Nov 2023
+                                </span>
+                            </div>
+                            <ul class="text-gray-300 text-sm space-y-2.5">
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-purple-400 text-xs mt-1"></i>
+                                    <span>Designed and documented modular RESTful APIs consumed by
+                                        mobile (Flutter) and web client applications.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-purple-400 text-xs mt-1"></i>
+                                    <span>Engineered real-time notification pipelines and socket
+                                        broadcasting using Laravel Reverb and Echo.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <i class="fas fa-chevron-right text-purple-400 text-xs mt-1"></i>
+                                    <span>Developed role-based multi-guard authentication modules
+                                        using Laravel Sanctum.</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
 
-                    <!-- Project 2: Auction Retriever -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-amber">
-                                    <i class="fas fa-circle text-amber-400 text-[8px]"></i> USA Production Live
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Scraping &amp; Real Estate SaaS</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                Auction Retriever — Property Auction Scraping Engine
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Architected the automated multi-source scraping engine and GraphQL backend aggregating thousands of real estate and land auction deals across the US. Features error-isolated DomCrawler queue pipelines, Lighthouse GraphQL search, Stripe Cashier subscriptions, and weekly investor digests.
-                            </p>
-                            <!-- Quantitative Metrics Grid -->
-                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-4">
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-amber-400 block">50,000+</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Listings/Day</span>
+                    <!-- Education Summary -->
+                    <div class="mt-12 glass-panel p-6 border border-white/10">
+                        <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-graduation-cap text-indigo-400"></i> Education &
+                            Credentials
+                        </h3>
+                        <div class="grid sm:grid-cols-2 gap-4 text-sm">
+                            <div class="p-3 bg-white/[0.02] rounded-lg border border-white/5">
+                                <div class="font-semibold text-white">
+                                    Diploma in Computer Science & Technology
                                 </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-emerald-400 block">99.8%</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Pipe Uptime</span>
+                                <div class="text-gray-400 text-xs">
+                                    Dinajpur Institute of Science & Technology
                                 </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-cyan-400 block">&lt;120ms</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Search Speed</span>
-                                </div>
-                                <div class="p-2 bg-white/[0.02] border border-white/5 rounded text-center">
-                                    <span class="text-xs font-bold font-mono text-indigo-400 block">50 States</span>
-                                    <span class="text-[10px] text-gray-400 uppercase font-mono">Coverage</span>
+                                <div class="text-indigo-400 text-xs font-mono mt-1">
+                                    2019 - 2023
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-amber">Laravel 11</span>
-                                <span class="tech-badge tech-badge-amber">DomCrawler</span>
-                                <span class="tech-badge tech-badge-amber">GraphQL</span>
-                                <span class="tech-badge tech-badge-amber">Stripe Cashier</span>
-                                <span class="tech-badge tech-badge-amber">Reverb</span>
-                                <span class="tech-badge tech-badge-amber">AWS S3</span>
-                                <span class="tech-badge tech-badge-amber">Laravel Modules</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://auctionretriever.com" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live:
-                                auctionretriever.com
-                            </a>
-                            <a href="projects.html#auctionretriever" class="text-xs font-semibold text-amber-400 hover:text-amber-300 flex items-center gap-1">
-                                <i class="fas fa-project-diagram"></i> Architecture Case Study &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: CruzeHub -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-cyan">
-                                    <i class="fas fa-clock text-cyan-400 text-[8px]"></i> Mobile
-                                    App • Private Staging
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Automotive Community &amp; Parts</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                CruzeHub — Automotive Marketplace &amp; Admin Suite
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Engineered the enterprise backend APIs, administration
-                                dashboard, and real-time community engine for an Australian
-                                automotive enthusiast mobile app (in private client staging).
-                                Features vehicle compatibility matching algorithms (connecting
-                                specific car models with compatible aftermarket parts) and
-                                real-time live socket chat.
-                            </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-cyan-400"></i> Complex vehicle
-                                    parts compatibility relational database schema
+                            <div class="p-3 bg-white/[0.02] rounded-lg border border-white/5">
+                                <div class="font-semibold text-white">
+                                    Higher Secondary Certificate (HSC) - Science
                                 </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-cyan-400"></i> Real-time
-                                    WebSocket notifications &amp; event broadcast pipelines
+                                <div class="text-gray-400 text-xs">
+                                    Kader Box Memorial College
+                                </div>
+                                <div class="text-indigo-400 text-xs font-mono mt-1">
+                                    2017 - 2019
                                 </div>
                             </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-cyan">Laravel</span>
-                                <span class="tech-badge tech-badge-cyan">RESTful API</span>
-                                <span class="tech-badge tech-badge-cyan">Laravel Echo</span>
-                                <span class="tech-badge tech-badge-cyan">WebSockets</span>
-                                <span class="tech-badge tech-badge-cyan">MySQL</span>
-                                <span class="tech-badge tech-badge-cyan">RBAC Admin</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <span class="text-xs sm:text-sm font-medium text-cyan-400/80 flex items-center gap-1.5">
-                                <i class="fas fa-mobile-alt"></i> Mobile App (Private Staging)
-                            </span>
-                            <a href="projects.html#cruzehub" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 3: EHListings (Twin Cities Week) -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-emerald">
-                                    <i class="fas fa-circle text-emerald-400 text-[8px]"></i>
-                                    USA Live Web
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Events & Listings Platform</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                EHListings — Local Events, City Guide & Community Directory
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Engineered the complete scalable Laravel backend for a live US
-                                local city listings & events hub. Built with GraphQL APIs
-                                (Lighthouse), real-time WebSockets (Laravel Reverb), automated
-                                Stripe payments, Twilio SMS verification, and Firebase Cloud
-                                Messaging (FCM).
-                            </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-emerald-400"></i> High-speed
-                                    GraphQL API & Livewire dynamic interactive feeds
-                                </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-emerald-400"></i> AWS S3 media
-                                    pipeline, Redis caching & automated PDF invoicing
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-emerald">Laravel 11</span>
-                                <span class="tech-badge tech-badge-emerald">GraphQL</span>
-                                <span class="tech-badge tech-badge-emerald">Reverb / WebSockets</span>
-                                <span class="tech-badge tech-badge-emerald">Stripe</span>
-                                <span class="tech-badge tech-badge-emerald">Firebase</span>
-                                <span class="tech-badge tech-badge-emerald">AWS S3</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://ehlistings.com" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live:
-                                ehlistings.com
-                            </a>
-                            <a href="projects.html#ehlistings" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 4: OscarU Mobile App Backend -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-cyan">
-                                    <i class="fab fa-google-play text-cyan-400 text-xs"></i>
-                                    Google Play Store
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Mobile API & Merchant Suite</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                OscarU (Motive) — Lifestyle & Events Discovery Mobile Engine
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Architected the complete high-throughput RESTful API backend
-                                and Super Admin CMS powering the official OscarU mobile
-                                application on Google Play Store. Features merchant analytics
-                                portals, event ticket bookings, personalized user discovery
-                                feeds, and Firebase push notifications.
-                            </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-cyan-400"></i> JWT Multi-Guard
-                                    Auth (Users, Merchants & Admins) + Apple Login
-                                </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-cyan-400"></i> RevenueCat In-App
-                                    Purchase Webhooks & Merchant Revenue Dashboards
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-cyan">Laravel 11</span>
-                                <span class="tech-badge tech-badge-cyan">Mobile REST API</span>
-                                <span class="tech-badge tech-badge-cyan">JWT Auth</span>
-                                <span class="tech-badge tech-badge-cyan">Firebase FCM</span>
-                                <span class="tech-badge tech-badge-cyan">RevenueCat</span>
-                                <span class="tech-badge tech-badge-cyan">MySQL</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://play.google.com/store/apps/details?id=com.oscaru.motive" target="_blank"
-                                rel="noopener"
-                                class="text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
-                                <i class="fab fa-google-play"></i> Play Store: OscarU Motive
-                            </a>
-                            <a href="projects.html#oscaru" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: Fest-Quest (Apple App Store) -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-indigo">
-                                    <i class="fab fa-apple text-white text-xs"></i> Apple App
-                                    Store Live
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">iOS Music & Memory App</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                Fest-Quest — Music Festival Memory Book & Super Admin Suite
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Engineered the complete scalable Laravel 11 RESTful API
-                                backend and Super Admin dashboard for Fest-Quest on the Apple
-                                App Store. Features festival performance rating engines, media
-                                vaults, real-time socket chat, Apple Sign-in with JWT auth,
-                                and Firebase FCM push notifications.
-                            </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-indigo-400"></i> Full Super
-                                    Admin Dashboard & Operations (Livewire, DataTables & RBAC)
-                                </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-indigo-400"></i> High-resolution
-                                    photo/video albums, Intervention Image & AWS S3
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-indigo">Laravel 11</span>
-                                <span class="tech-badge tech-badge-indigo">Apple Store</span>
-                                <span class="tech-badge tech-badge-indigo">Mobile API</span>
-                                <span class="tech-badge tech-badge-indigo">JWT Multi-Guard</span>
-                                <span class="tech-badge tech-badge-indigo">Firebase FCM</span>
-                                <span class="tech-badge tech-badge-indigo">MySQL</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://apps.apple.com/au/app/fest-quest/id6771652854" target="_blank"
-                                rel="noopener"
-                                class="text-sm font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1.5">
-                                <i class="fab fa-apple"></i> App Store: Fest-Quest
-                            </a>
-                            <a href="projects.html#fest-quest" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 6: Caragon (Fashion E-Commerce) -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-emerald">
-                                    <i class="fas fa-circle text-emerald-400 text-[8px]"></i>
-                                    Production Live
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Next.js & Laravel E-Commerce</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                Caragon — Modern Apparel & Fashion Platform
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Engineered the complete headless Laravel 11 RESTful API
-                                backend and integrated Next.js e-commerce storefront. Features
-                                dynamic nested product variants, seasonal drops,
-                                multi-location courier & tax calculation engine, and Stripe
-                                Checkout sessions.
-                            </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-emerald-400"></i>
-                                    Multi-attribute variant schema (Size, Color, Season Revival
-                                    Drops)
-                                </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-emerald-400"></i> Location-aware
-                                    shipping fees, dynamic taxes & Stripe webhook handlers
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-emerald">Next.js</span>
-                                <span class="tech-badge tech-badge-emerald">Laravel</span>
-                                <span class="tech-badge tech-badge-emerald">Stripe Checkout</span>
-                                <span class="tech-badge tech-badge-emerald">JWT Auth</span>
-                                <span class="tech-badge tech-badge-emerald">MySQL</span>
-                                <span class="tech-badge tech-badge-emerald">Headless CMS</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://caragoan.vercel.app" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-emerald-400 hover:text-emerald-300 flex items-center gap-1.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live:
-                                caragoan.vercel.app
-                            </a>
-                            <a href="projects.html#caragon" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 7: Organ Sciences -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-purple">
-                                    <i class="fas fa-circle text-purple-400 text-[8px]"></i>
-                                    Live D2C Platform
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Next.js &amp; Laravel</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                Organ Sciences — D2C Supplement Subscription Portal
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Developed a high-converting recurring subscription e-commerce
-                                portal with Next.js & Laravel. Implemented automated recurring
-                                billing cycles, subscriber customer self-service portals, and
-                                robust Stripe subscription webhook listeners with automated
-                                retries.
-                            </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-purple-400"></i> Stripe webhook
-                                    idempotency & automated dunning/retry logic
-                                </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-purple-400"></i> Seamless
-                                    Next.js SSR frontend + Headless Laravel API backend
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-purple">Next.js</span>
-                                <span class="tech-badge tech-badge-purple">Laravel</span>
-                                <span class="tech-badge tech-badge-purple">Stripe API</span>
-                                <span class="tech-badge tech-badge-purple">Webhooks</span>
-                                <span class="tech-badge tech-badge-purple">TypeScript</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://organ-sciences.vercel.app" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-purple-400 hover:text-purple-300 flex items-center gap-1.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live:
-                                organ-sciences.vercel.app
-                            </a>
-                            <a href="projects.html#organ-sciences" class="text-xs text-gray-400 hover:text-white">
-                                Architecture Case Study &rarr;
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Project 8: CodeStudio Pro -->
-                    <div class="glass-panel overflow-hidden interactive-card border border-white/10 flex flex-col">
-                        <div class="p-6 border-b border-white/10 flex-grow">
-                            <div class="flex items-center justify-between mb-3">
-                                <span class="tech-badge tech-badge-cyan">
-                                    <i class="fas fa-circle text-cyan-400 text-[8px]"></i>
-                                    Production Live
-                                </span>
-                                <span class="text-xs font-mono text-gray-400">Next.js &bull; Headless API</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">
-                                CodeStudio Pro — Agency Platform & Real-Time Workspace
-                            </h3>
-                            <p class="text-gray-300 text-sm leading-relaxed mb-4">
-                                Full-stack software agency hub and client tracking workspace.
-                                Engineered with Next.js (App Router, Server Components
-                                &amp; ISR), React, TypeScript, and Tailwind CSS,
-                                connected to a high-speed headless Laravel microservice
-                                backend with Laravel Reverb WebSockets for instant
-                                notification toasts, dynamic 5-palette theme switching, and
-                                interactive quote estimation.
-                            </p>
-                            <div class="space-y-2 mb-4">
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-cyan-400"></i> Next.js ISR +
-                                    dynamic product sandboxes &amp; interactive quote estimator
-                                </div>
-                                <div class="text-xs text-gray-400 font-mono flex items-center gap-2">
-                                    <i class="fas fa-check text-cyan-400"></i> Laravel Reverb
-                                    WebSocket broadcasts &amp; 5-palette CSS variable theme
-                                    engine
-                                </div>
-                            </div>
-                            <div class="flex flex-wrap gap-1.5 pt-2">
-                                <span class="tech-badge tech-badge-cyan">Next.js</span>
-                                <span class="tech-badge tech-badge-cyan">React.js</span>
-                                <span class="tech-badge tech-badge-cyan">TypeScript</span>
-                                <span class="tech-badge tech-badge-cyan">Tailwind CSS</span>
-                                <span class="tech-badge tech-badge-cyan">Laravel Reverb</span>
-                                <span class="tech-badge tech-badge-cyan">Microservices</span>
-                            </div>
-                        </div>
-                        <div
-                            class="px-6 py-4 bg-white/[0.02] border-t border-white/5 flex items-center justify-between">
-                            <a href="https://code-studio-pro.vercel.app" target="_blank" rel="noopener"
-                                class="text-sm font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1.5">
-                                <i class="fas fa-external-link-alt"></i> Visit Live:
-                                code-studio-pro.vercel.app
-                            </a>
-                            <a href="projects.html#code-studio" class="text-xs text-gray-400 hover:text-white">
-                                Case Study &rarr;
-                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Professional Experience Timeline -->
-        <section class="py-16 bg-black/20 border-t border-white/5">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2 block">
-                        Career Journey
-                    </span>
-                    <h2 class="text-3xl font-bold tracking-tight">Professional Engineering Experience</h2>
-                </div>
-
-                <div class="space-y-8">
-                    <!-- Softvence IT Ltd -->
-                    <div class="glass-panel p-6 sm:p-8 relative timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
+                <!-- Engineering Log Teaser Section -->
+                <section class="py-16 bg-black/20 border-t border-white/5">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
                             <div>
-                                <h3 class="text-xl font-bold text-white">
-                                    Laravel / Backend Developer
-                                </h3>
-                                <p class="text-indigo-400 font-medium">
-                                    Softvence IT Ltd
-                                    <span class="text-gray-400 text-xs font-normal">| Mohakhali, Dhaka, BD</span>
+                                <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2 block">
+                                    Technical Deep-Dives
+                                </span>
+                                <h2 class="text-3xl font-bold tracking-tight text-white">
+                                    Engineering Log &amp; Architecture Notes
+                                </h2>
+                                <p class="text-gray-400 text-sm mt-1">
+                                    Battle-tested notes on database tuning, zero-secret AWS deployments, and
+                                    high-concurrency patterns.
                                 </p>
                             </div>
-                            <span
-                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 w-fit">
-                                Dec 2025 - Present
-                            </span>
-                        </div>
-                        <ul class="text-gray-300 text-sm space-y-2.5">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
-                                <span>Design and develop scalable Laravel backend systems using
-                                    modular, service-based architecture, robust RESTful APIs,
-                                    and reusable business logic.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
-                                <span>Develop production-ready web applications, administrative
-                                    dashboards, CRM workflows, and multi-vendor business modules
-                                    for international clients.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
-                                <span>Design and optimize database schemas, relationships,
-                                    indexes, and complex Eloquent/SQL queries, improving backend
-                                    processing performance by <strong>30%</strong>.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
-                                <span>Integrate third-party services, payment gateways, and
-                                    webhook-based workflows with reliable error handling and
-                                    retry mechanisms.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-indigo-400 text-xs mt-1"></i>
-                                <span>Deploy and maintain production applications on AWS
-                                    infrastructure, working with EC2, S3, Aurora RDS, SES, SSM,
-                                    OIDC, and Application Load Balancer.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Edison Industries Ltd -->
-                    <div class="glass-panel p-6 sm:p-8 relative timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">
-                                    Jr. Technical Assistant / Software Operations
-                                </h3>
-                                <p class="text-cyan-400 font-medium">
-                                    Edison Industries Ltd
-                                    <span class="text-gray-400 text-xs font-normal">| Savar, Dhaka, BD</span>
-                                </p>
-                            </div>
-                            <span
-                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 w-fit">
-                                Jan 2024 - Nov 2025
-                            </span>
-                        </div>
-                        <ul class="text-gray-300 text-sm space-y-2.5">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-cyan-400 text-xs mt-1"></i>
-                                <span>Provided technical troubleshooting and hardware-software
-                                    system integration for production and engineering
-                                    lines.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-cyan-400 text-xs mt-1"></i>
-                                <span>Developed automated diagnostic scripts and data logging
-                                    routines to streamline equipment testing workflows.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-cyan-400 text-xs mt-1"></i>
-                                <span>Collaborated with cross-functional engineering teams to
-                                    diagnose system bottlenecks and improve operational
-                                    turnaround time by <strong>20%</strong>.</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Kodeeo Ltd -->
-                    <div class="glass-panel p-6 sm:p-8 relative timeline-item">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2">
-                            <div>
-                                <h3 class="text-xl font-bold text-white">
-                                    App Developer (Intern / Trainee)
-                                </h3>
-                                <p class="text-purple-400 font-medium">
-                                    Kodeeo Ltd
-                                    <span class="text-gray-400 text-xs font-normal">| Uttara, Dhaka, BD</span>
-                                </p>
-                            </div>
-                            <span
-                                class="inline-flex items-center px-3 py-1 rounded-full text-xs font-mono bg-purple-500/10 text-purple-300 border border-purple-500/20 w-fit">
-                                Sept 2023 - Nov 2023
-                            </span>
-                        </div>
-                        <ul class="text-gray-300 text-sm space-y-2.5">
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-purple-400 text-xs mt-1"></i>
-                                <span>Designed and documented modular RESTful APIs consumed by
-                                    mobile (Flutter) and web client applications.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-purple-400 text-xs mt-1"></i>
-                                <span>Engineered real-time notification pipelines and socket
-                                    broadcasting using Laravel Reverb and Echo.</span>
-                            </li>
-                            <li class="flex items-start gap-2">
-                                <i class="fas fa-chevron-right text-purple-400 text-xs mt-1"></i>
-                                <span>Developed role-based multi-guard authentication modules
-                                    using Laravel Sanctum.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Education Summary -->
-                <div class="mt-12 glass-panel p-6 border border-white/10">
-                    <h3 class="text-lg font-bold text-white mb-4 flex items-center gap-2">
-                        <i class="fas fa-graduation-cap text-indigo-400"></i> Education &
-                        Credentials
-                    </h3>
-                    <div class="grid sm:grid-cols-2 gap-4 text-sm">
-                        <div class="p-3 bg-white/[0.02] rounded-lg border border-white/5">
-                            <div class="font-semibold text-white">
-                                Diploma in Computer Science & Technology
-                            </div>
-                            <div class="text-gray-400 text-xs">
-                                Dinajpur Institute of Science & Technology
-                            </div>
-                            <div class="text-indigo-400 text-xs font-mono mt-1">
-                                2019 - 2023
-                            </div>
-                        </div>
-                        <div class="p-3 bg-white/[0.02] rounded-lg border border-white/5">
-                            <div class="font-semibold text-white">
-                                Higher Secondary Certificate (HSC) - Science
-                            </div>
-                            <div class="text-gray-400 text-xs">
-                                Kader Box Memorial College
-                            </div>
-                            <div class="text-indigo-400 text-xs font-mono mt-1">
-                                2017 - 2019
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        <!-- Engineering Log Teaser Section -->
-        <section class="py-16 bg-black/20 border-t border-white/5">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
-                    <div>
-                        <span class="text-xs font-mono uppercase tracking-widest text-indigo-400 mb-2 block">
-                            Technical Deep-Dives
-                        </span>
-                        <h2 class="text-3xl font-bold tracking-tight text-white">
-                            Engineering Log &amp; Architecture Notes
-                        </h2>
-                        <p class="text-gray-400 text-sm mt-1">
-                            Battle-tested notes on database tuning, zero-secret AWS deployments, and high-concurrency patterns.
-                        </p>
-                    </div>
-                    <a href="articles.html" class="text-indigo-400 hover:text-indigo-300 font-semibold text-sm flex items-center gap-1 group">
-                        Read All Architecture Notes
-                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
-                    </a>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6">
-                    <article class="glass-panel p-6 border border-white/10 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-2 text-xs font-mono text-gray-400 mb-2">
-                                <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Database Tuning</span>
-                                <span>• 6 min read</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-2 hover:text-indigo-400 transition-colors">
-                                <a href="articles.html#mysql-latency-optimization">Slashing MySQL p95 Query Latency from 850ms to 32ms in High-Throughput Laravel</a>
-                            </h3>
-                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
-                                Profiling slow nested queries using EXPLAIN ANALYZE, building composite indexes with the leftmost prefix rule, and layering Redis cache tags.
-                            </p>
-                        </div>
-                        <a href="articles.html#mysql-latency-optimization" class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
-                            Read technical case study <i class="fas fa-arrow-right text-[10px]"></i>
-                        </a>
-                    </article>
-
-                    <article class="glass-panel p-6 border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
-                        <div>
-                            <div class="flex items-center gap-2 text-xs font-mono text-gray-400 mb-2">
-                                <span class="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">AWS &amp; DevOps</span>
-                                <span>• 5 min read</span>
-                            </div>
-                            <h3 class="text-lg font-bold text-white mb-2 hover:text-cyan-400 transition-colors">
-                                <a href="articles.html#aws-oidc-github-actions">Zero-Secret AWS Deployments with GitHub Actions &amp; OpenID Connect (OIDC)</a>
-                            </h3>
-                            <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
-                                Eliminating static IAM access keys in GitHub Secrets. Assuming short-lived STS credentials via cryptographic tokens for zero-downtime EC2 deployments.
-                            </p>
-                        </div>
-                        <a href="articles.html#aws-oidc-github-actions" class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
-                            Read technical case study <i class="fas fa-arrow-right text-[10px]"></i>
-                        </a>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <!-- Call to Action Banner -->
-        <section class="py-16">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="glass-panel p-8 sm:p-12 text-center relative overflow-hidden border border-indigo-500/30">
-                    <div class="relative z-10 space-y-6">
-                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
-                            Looking for a Senior-Level Backend Engineer?
-                        </h2>
-                        <p class="text-gray-300 max-w-2xl mx-auto text-base">
-                            Whether you need robust Laravel API architecture, AWS cloud
-                            deployment, database performance tuning, or real-time WebSocket
-                            pipelines, I'm ready to bring immediate value to your team.
-                        </p>
-                        <div class="flex flex-wrap gap-4 justify-center pt-2">
-                            <a href="contact.html" class="btn-primary">
-                                <i class="fas fa-envelope"></i> Get in Touch
-                            </a>
-                            <a href="resume.html" class="btn-secondary">
-                                <i class="fas fa-file-pdf"></i> View & Download Resume
+                            <a href="articles.html"
+                                class="text-indigo-400 hover:text-indigo-300 font-semibold text-sm flex items-center gap-1 group">
+                                Read All Architecture Notes
+                                <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                             </a>
                         </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <article
+                                class="glass-panel p-6 border border-white/10 hover:border-indigo-500/50 transition-all flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2 text-xs font-mono text-gray-400 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">Database
+                                            Tuning</span>
+                                        <span>• 6 min read</span>
+                                    </div>
+                                    <h3
+                                        class="text-lg font-bold text-white mb-2 hover:text-indigo-400 transition-colors">
+                                        <a href="articles.html#mysql-latency-optimization">Slashing MySQL p95 Query
+                                            Latency from 850ms to 32ms in High-Throughput Laravel</a>
+                                    </h3>
+                                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                        Profiling slow nested queries using EXPLAIN ANALYZE, building composite indexes
+                                        with the leftmost prefix rule, and layering Redis cache tags.
+                                    </p>
+                                </div>
+                                <a href="articles.html#mysql-latency-optimization"
+                                    class="text-xs font-semibold text-indigo-400 hover:text-indigo-300 flex items-center gap-1">
+                                    Read technical case study <i class="fas fa-arrow-right text-[10px]"></i>
+                                </a>
+                            </article>
+
+                            <article
+                                class="glass-panel p-6 border border-white/10 hover:border-cyan-500/50 transition-all flex flex-col justify-between">
+                                <div>
+                                    <div class="flex items-center gap-2 text-xs font-mono text-gray-400 mb-2">
+                                        <span
+                                            class="px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">AWS
+                                            &amp; DevOps</span>
+                                        <span>• 5 min read</span>
+                                    </div>
+                                    <h3 class="text-lg font-bold text-white mb-2 hover:text-cyan-400 transition-colors">
+                                        <a href="articles.html#aws-oidc-github-actions">Zero-Secret AWS Deployments with
+                                            GitHub Actions &amp; OpenID Connect (OIDC)</a>
+                                    </h3>
+                                    <p class="text-gray-300 text-xs sm:text-sm leading-relaxed mb-4">
+                                        Eliminating static IAM access keys in GitHub Secrets. Assuming short-lived STS
+                                        credentials via cryptographic tokens for zero-downtime EC2 deployments.
+                                    </p>
+                                </div>
+                                <a href="articles.html#aws-oidc-github-actions"
+                                    class="text-xs font-semibold text-cyan-400 hover:text-cyan-300 flex items-center gap-1">
+                                    Read technical case study <i class="fas fa-arrow-right text-[10px]"></i>
+                                </a>
+                            </article>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
+
+                <!-- Call to Action Banner -->
+                <section class="py-16">
+                    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div
+                            class="glass-panel p-8 sm:p-12 text-center relative overflow-hidden border border-indigo-500/30">
+                            <div class="relative z-10 space-y-6">
+                                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">
+                                    Looking for a Senior-Level Backend Engineer?
+                                </h2>
+                                <p class="text-gray-300 max-w-2xl mx-auto text-base">
+                                    Whether you need robust Laravel API architecture, AWS cloud
+                                    deployment, database performance tuning, or real-time WebSocket
+                                    pipelines, I'm ready to bring immediate value to your team.
+                                </p>
+                                <div class="flex flex-wrap gap-4 justify-center pt-2">
+                                    <a href="contact.html" class="btn-primary">
+                                        <i class="fas fa-envelope"></i> Get in Touch
+                                    </a>
+                                    <a href="resume.html" class="btn-secondary">
+                                        <i class="fas fa-file-pdf"></i> View & Download Resume
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
     </main>
 
     <!-- Footer -->
@@ -1523,13 +1579,16 @@
             </div>
             <div class="flex items-center gap-6 text-gray-400">
                 <a href="https://github.com/sajusun" target="_blank" rel="noopener"
-                    class="hover:text-white transition-colors" aria-label="GitHub"><i class="fab fa-github text-lg"></i></a>
+                    class="hover:text-white transition-colors" aria-label="GitHub"><i
+                        class="fab fa-github text-lg"></i></a>
                 <a href="https://linkedin.com/in/sajusun" target="_blank" rel="noopener"
-                    class="hover:text-cyan-400 transition-colors" aria-label="LinkedIn"><i class="fab fa-linkedin text-lg"></i></a>
+                    class="hover:text-cyan-400 transition-colors" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin text-lg"></i></a>
                 <a href="https://x.com/sajusun" target="_blank" rel="noopener"
-                    class="hover:text-white transition-colors" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter text-lg"></i></a>
-                <a href="mailto:backend.sakhawat@gmail.com" class="hover:text-indigo-400 transition-colors" aria-label="Email"><i
-                        class="fas fa-envelope text-lg"></i></a>
+                    class="hover:text-white transition-colors" aria-label="X (Twitter)"><i
+                        class="fa-brands fa-x-twitter text-lg"></i></a>
+                <a href="mailto:backend.sakhawat@gmail.com" class="hover:text-indigo-400 transition-colors"
+                    aria-label="Email"><i class="fas fa-envelope text-lg"></i></a>
                 <a href="tel:+8801580349431" class="hover:text-emerald-400 transition-colors" aria-label="Phone"><i
                         class="fas fa-phone text-lg"></i></a>
             </div>
